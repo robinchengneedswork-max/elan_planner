@@ -151,15 +151,15 @@ function updateInspector() {
     </div>`;
     return;
   }
-  const cat = IKEA.find((c) => c.id === it.catId);
+  const cat = catalogById(it.catId);
   const clash = itemClashes(it);
   const gaps = boxClearances(it, obstacleSegs(it.uid));
   const names = ['Front', 'Right', 'Back', 'Left'];
 
   host.innerHTML = `<div class="pane-pad">
     ${cat && cat.img ? `<img class="insp-photo" src="${attr(cat.img)}" alt="${attr(it.name)}">` : ''}
-    <div class="insp-title">${it.name}</div>
-    <div class="insp-sub">${cat ? cat.type : ''}${cat && cat.price != null ? ' &middot; ' + money(cat.price) : ''}</div>
+    <div class="insp-title">${attr(it.name)}${cat && cat.custom ? ' <span class="mine">yours</span>' : ''}</div>
+    <div class="insp-sub">${cat ? attr(cat.type) : ''}${cat && cat.price != null ? ' &middot; ' + money(cat.price) : ''}</div>
     ${cat ? inspFacts(cat) : ''}
     ${clash ? `<div class="calib-note" style="margin-top:12px;border-color:#e8bcbd;background:#fdf3f3;color:#a02a2c">
         This overlaps a wall, a fixture or another piece.</div>` : ''}
@@ -175,9 +175,12 @@ function updateInspector() {
     </div>
     <div class="btn-row">
       <button id="in-del" class="danger">Remove</button>
-      ${cat ? `<a class="link" href="${cat.url}" target="_blank" rel="noopener"
-                  style="align-self:center;padding-left:6px">View on IKEA &rarr;</a>` : ''}
+      ${cat && cat.custom ? `<button id="in-edit">Edit this piece</button>` : ''}
     </div>
+    ${cat && cat.url ? `<div class="btn-row" style="margin-top:8px">
+      <a class="link" href="${attr(cat.url)}" target="_blank" rel="noopener noreferrer">View
+        on ${attr(cat.brand || 'IKEA')} &rarr;</a>
+    </div>` : ''}
     <h2 class="group" style="margin-left:0">Room around it</h2>
     <div class="rows">
       ${gaps.map((g, i) => `<label>${names[i]}</label>
@@ -193,6 +196,8 @@ function updateInspector() {
   document.getElementById('in-rot-r').onclick = () => { rotateItem(it.uid, ROT_STEP_DEG); saveWork(); refreshAll(); };
   document.getElementById('in-dupe').onclick = () => { duplicateItem(it.uid); saveWork(); refreshAll(); };
   document.getElementById('in-del').onclick = () => { removeItem(it.uid); saveWork(); refreshAll(); };
+  const edit = document.getElementById('in-edit');
+  if (edit) edit.onclick = () => openCustomEditor(it.catId);
 
   bindDim('in-w', (v) => { it.w = v; });
   bindDim('in-d', (v) => { it.d = v; });
@@ -214,10 +219,10 @@ function inspFacts(cat) {
     bits.push(`<span class="fact"><b>Height</b> ${fmtIn(cat.h)}</span>`);
   }
   if (cat.color) {
-    bits.push(`<span class="fact"><i class="dot" style="background:${attr(cat.color.hex)}"></i>${cat.color.name}</span>`);
+    bits.push(`<span class="fact"><i class="dot" style="background:${attr(cat.color.hex)}"></i>${attr(cat.color.name)}</span>`);
   }
   if (cat.rating != null) {
-    bits.push(`<span class="fact">${stars(cat.rating)} <span class="rc">${cat.rating} &middot; ${cat.reviews}</span></span>`);
+    bits.push(`<span class="fact">${stars(cat.rating)} <span class="rc">${cat.rating} &middot; ${cat.reviews || 0}</span></span>`);
   }
   return bits.length ? `<div class="insp-facts">${bits.join('')}</div>` : '';
 }
@@ -246,7 +251,7 @@ function updatePlacedList() {
     const p = unitPrice(it);
     return `<div class="placed ${it.uid === State.selectedUid ? 'on' : ''} ${itemClashes(it) ? 'clash' : ''}" data-uid="${it.uid}">
       <span class="swatch" style="width:11px;height:11px;background:${CATEGORY_COLORS[it.category]}"></span>
-      <span class="nm">${it.name}</span>
+      <span class="nm">${attr(it.name)}</span>
       <span class="pr">${p == null ? '&mdash;' : money(p)}</span>
       <span class="dm">${fmtIn(it.w)}&times;${fmtIn(it.d)}</span>
       <button class="x" data-del="${it.uid}" title="Remove">&times;</button>
@@ -385,11 +390,11 @@ function initToggles() {
     render();
     if (State.showRealColor) {
       const missing = new Set(State.items
-        .filter((i) => { const c = IKEA.find((x) => x.id === i.catId); return !c || !c.color; })
+        .filter((i) => { const c = catalogById(i.catId); return !c || !c.color; })
         .map((i) => i.name));
       toast(missing.size
-        ? `Real colours &mdash; ${[...missing].join(', ')} ${missing.size > 1 ? 'have' : 'has'} none on file, shown grey`
-        : 'Real IKEA colours');
+        ? `Real colours &mdash; ${attr([...missing].join(', '))} ${missing.size > 1 ? 'have' : 'has'} none on file, shown grey`
+        : 'Real colours');
     }
   });
   document.getElementById('btn-fit').addEventListener('click', () => {

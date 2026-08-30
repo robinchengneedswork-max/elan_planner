@@ -18,6 +18,10 @@ function checkViewport() {
 }
 
 function init() {
+  // Before anything can be drawn or priced: a restored layout may be full of
+  // pieces whose catalogue entry only exists because you added it.
+  loadCustom();
+
   if (!restoreWork()) {
     setPlan(State.planId);
   }
@@ -29,6 +33,7 @@ function init() {
   initToggles();
   initLayoutControls();
   initCatalog();
+  initCustomUI();
   initCalibrate();
   initInput();
 

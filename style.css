@@ -171,7 +171,49 @@ h2.group {
 }
 h2.group:first-child { margin-top: 14px; }
 
+.add-custom {
+  width: 100%;
+  margin-top: 8px;
+  border-style: dashed;
+  color: var(--ink-2);
+  font-size: 12px;
+}
+.add-custom:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
 /* --- catalog list -------------------------------------------------------- */
+
+/* The row is a button, so the pencil cannot live inside it. It sits in a
+   wrapper on top, revealed on hover, and stops its own mousedown so reaching
+   for it does not start dragging the piece onto the plan. */
+.cat-row { position: relative; }
+.cat-edit {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  background: var(--panel);
+  opacity: 0;
+  transition: opacity .12s;
+}
+.cat-row:hover .cat-edit, .cat-edit:focus { opacity: 1; }
+.cat-edit:hover { color: var(--accent); border-color: var(--accent); }
+
+.mine {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #14508f;
+  background: var(--accent-soft);
+  border: 1px solid #bcd6f5;
+  border-radius: 999px;
+  padding: 1px 5px;
+  vertical-align: 1px;
+}
 
 .cat-item {
   display: flex;
@@ -207,6 +249,10 @@ h2.group:first-child { margin-top: 14px; }
   border-radius: 4px;
   user-select: none;
 }
+/* A piece you added without a photo. An empty <img> would draw the browser's
+   broken-file icon, which reads as an error rather than as "none given". */
+.cat-photo.none { border-style: dashed; }
+
 .cat-right {
   flex: 0 0 auto;
   display: flex;
@@ -394,6 +440,94 @@ a.link:hover { text-decoration: underline; }
 .cmp-bar i { display: block; height: 100%; background: var(--ink-3); }
 .cmp-row.on .cmp-bar i { background: var(--accent); }
 
+/* --- the add-your-own sheet ---------------------------------------------- */
+
+dialog.sheet {
+  width: min(460px, calc(100vw - 32px));
+  max-height: min(88vh, 900px);
+  overflow-y: auto;
+  padding: 20px 22px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+dialog.sheet::backdrop { background: rgba(35, 32, 28, .38); }
+dialog.sheet h2 { font-size: 16px; margin: 0; letter-spacing: -.01em; }
+dialog.sheet h2.group { font-size: 10px; margin: 18px 0 0; }
+
+.sheet-note, .sheet-hint {
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+.sheet-hint { font-size: 11.5px; color: var(--ink-3); margin-top: 9px; }
+
+/* Same two-column grid as the inspector, so the app has one form shape. */
+.sheet-rows { grid-template-columns: 86px 1fr; margin-top: 12px; }
+.sheet-rows input[type="text"] { font-family: var(--sans); font-size: 12.5px; }
+.sheet-rows select { width: 100%; font-size: 12.5px; padding: 5px 7px; }
+
+/* .rows sets width:100% on every input it contains, which is right for the
+   text fields and wrong for a checkbox — hence the explicit widths here. */
+.pair { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.pair > input[type="text"] { flex: 1; min-width: 0; }
+.pair > input[type="color"] {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 27px;
+  padding: 2px;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+}
+.pair > input[type="checkbox"] { flex: 0 0 auto; width: auto; margin: 0; }
+.pair.check span { flex: 1; min-width: 0; font-size: 11.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* The file input is off-screen, not display:none — a hidden input still has to
+   be reachable by the keyboard through its label. */
+.pair > input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.filebtn {
+  flex: 0 0 auto;
+  font-size: 11.5px;
+  color: var(--ink-2);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+.filebtn:hover { background: var(--panel-2); color: var(--ink); }
+
+.cf-preview {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.cf-preview.empty { display: none; }
+
+.form-errors {
+  margin-top: 14px;
+  padding: 9px 11px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #a02a2c;
+  background: #fdf3f3;
+  border: 1px solid #e8bcbd;
+  border-radius: 8px;
+}
+
+.sheet-foot { display: flex; align-items: center; gap: 7px; margin-top: 18px; }
+.sheet-foot .spacer { flex: 1; }
+
 /* --- calibration --------------------------------------------------------- */
 
 .calib-note {
@@ -503,6 +637,8 @@ body.touch-only .touch-note {
   border-radius: 9px;
 }
 body.touch-only .keys { display: none; }
+/* No hover on a finger, so the pencil is simply always there. */
+body.touch-only .cat-edit { opacity: 1; }
 
 @media (max-width: 900px) {
   .topbar {

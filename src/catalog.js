@@ -1,10 +1,15 @@
-// catalog.js — the IKEA sidebar. Click a piece to drop it in the middle of the
-// view, or drag it straight onto the plan; both routes end up in the same
+// catalog.js — the furniture sidebar. Click a piece to drop it in the middle of
+// the view, or drag it straight onto the plan; both routes end up in the same
 // pointer-drag the canvas already knows how to run.
 //
 // A row carries two different pictures of the same thing, and both earn their
 // place: the photo says what it looks like, the outlined chip says what shape
 // its footprint is. Only the second one tells you whether it fits.
+//
+// The list is IKEA plus whatever you have added yourself (custom.js), sorted
+// and grouped together on purpose: an Amazon loveseat is only interesting next
+// to the KIVIK it is competing with. Your own pieces carry a "yours" badge and
+// a pencil; nothing else about them is different.
 
 let catalogFilter = '';
 let catalogSort = 'category';
@@ -19,11 +24,14 @@ const CATALOG_SORTS = {
   rating: 'Best rated',
 };
 
+// "amazon" and "mine" both find your own pieces, because those are the two
+// ways you are going to go looking for them.
 function catalogMatches(item, q) {
   if (catalogMaxPrice && item.price != null && item.price > catalogMaxPrice) return false;
   if (!q) return true;
-  const hay = (item.name + ' ' + item.type + ' ' + CATEGORY_LABELS[item.category] +
-    ' ' + (item.color ? item.color.name : '')).toLowerCase();
+  const hay = [item.name, item.type, CATEGORY_LABELS[item.category],
+    item.color ? item.color.name : '', item.brand || 'IKEA',
+    item.custom ? 'mine yours custom' : ''].join(' ').toLowerCase();
   return q.split(/\s+/).every((t) => hay.includes(t));
 }
 
@@ -55,21 +63,37 @@ function money(n) {
                             : n.toLocaleString('en-US', { minimumFractionDigits: 2 }));
 }
 
+// Names and types are user-entered now, so everything written into the row
+// goes through attr() — including the parts that used to be safe when the only
+// source was a file in the repo.
 function catalogRow(it) {
-  const bits = [it.type];
+  const bits = [attr(it.type)];
+  if (it.brand && it.brand !== 'IKEA') bits.push(attr(it.brand));
   if (it.price != null) bits.push(money(it.price));
-  return `<button class="cat-item" data-id="${it.id}" title="${attr(it.name + ' ' + it.type)}">
-    <img class="cat-photo" src="${attr(it.img || '')}" alt="" loading="lazy" draggable="false">
-    <span class="cat-text">
-      <span class="cat-name">${it.name}${it.verified ? '' : ' <span title="dimension not verified">&#9888;</span>'}</span>
-      <span class="cat-sub">${bits.join(' &middot; ')}</span>
-      <span class="cat-meta">${stars(it.rating)}${it.rating != null ? `<span class="rc">${it.reviews}</span>` : ''}</span>
-    </span>
-    <span class="cat-right">
-      <span class="cat-dims">${fmtIn(it.w)}&times;${fmtIn(it.d)}</span>
-      <span class="chip" style="${chipStyle(it)}"></span>
-    </span>
-  </button>`;
+
+  // The warning is about a catalogue number that could not be checked against
+  // ikea.com. A piece you typed in yourself has no such claim to fail.
+  const flag = !it.custom && !it.verified
+    ? ' <span title="dimension not verified">&#9888;</span>' : '';
+
+  return `<div class="cat-row">
+    <button class="cat-item" data-id="${attr(it.id)}" title="${attr(it.name + ' ' + it.type)}">
+      ${it.img
+        ? `<img class="cat-photo" src="${attr(it.img)}" alt="" loading="lazy" draggable="false">`
+        : `<span class="cat-photo none" style="background:${CATEGORY_COLORS[it.category]}22"></span>`}
+      <span class="cat-text">
+        <span class="cat-name">${attr(it.name)}${flag}${it.custom ? ' <span class="mine">yours</span>' : ''}</span>
+        <span class="cat-sub">${bits.join(' &middot; ')}</span>
+        <span class="cat-meta">${stars(it.rating)}${it.rating != null ? `<span class="rc">${it.reviews || 0}</span>` : ''}</span>
+      </span>
+      <span class="cat-right">
+        <span class="cat-dims">${fmtIn(it.w)}&times;${fmtIn(it.d)}</span>
+        <span class="chip" style="${chipStyle(it)}"></span>
+      </span>
+    </button>
+    ${it.custom ? `<button class="cat-edit" data-edit="${attr(it.id)}"
+        title="Edit or remove this piece">&#9998;</button>` : ''}
+  </div>`;
 }
 
 // A flat 5.0 from one review is not better than a 4.7 from three thousand, and
@@ -84,12 +108,19 @@ function ratingScore(item) {
   return (n * item.rating + RATING_PRIOR * catalogMeanRating()) / (n + RATING_PRIOR);
 }
 
-let _meanRating = null;
+// Keyed on the identity of the merged list rather than on a flag, so adding a
+// piece invalidates the mean by construction — catalogAll() hands back a new
+// array whenever the custom list changes.
+let _meanRating = 4;
+let _meanRatingFor = null;
+
 function catalogMeanRating() {
-  if (_meanRating == null) {
-    const rated = IKEA.filter((i) => i.rating != null);
+  const all = catalogAll();
+  if (_meanRatingFor !== all) {
+    const rated = all.filter((i) => i.rating != null);
     _meanRating = rated.length
       ? rated.reduce((a, i) => a + i.rating, 0) / rated.length : 4;
+    _meanRatingFor = all;
   }
   return _meanRating;
 }
@@ -109,7 +140,7 @@ function sortedItems(items) {
 function renderCatalog() {
   const host = document.getElementById('catalog-list');
   const q = catalogFilter.trim().toLowerCase();
-  const hits = IKEA.filter((i) => catalogMatches(i, q));
+  const hits = catalogAll().filter((i) => catalogMatches(i, q));
   let html = '';
 
   if (catalogSort === 'category') {
@@ -126,23 +157,39 @@ function renderCatalog() {
 
   if (!hits.length) {
     html = `<div class="empty">Nothing matches${catalogFilter ? ` &ldquo;${attr(catalogFilter)}&rdquo;` : ''}` +
-      `${catalogMaxPrice ? ` under ${money(catalogMaxPrice)}` : ''}.</div>`;
+      `${catalogMaxPrice ? ` under ${money(catalogMaxPrice)}` : ''}.<br><br>
+      If the piece you want is not in here, add it &mdash; the button above takes
+      a link, a name and a footprint.</div>`;
   }
   host.innerHTML = html;
 
   for (const el of host.querySelectorAll('.cat-item')) {
     el.addEventListener('mousedown', onCatalogDown);
   }
+  // The pencil sits inside the row, so its mousedown would otherwise start a
+  // drag of the very piece you are trying to edit.
+  for (const el of host.querySelectorAll('.cat-edit')) {
+    el.addEventListener('mousedown', (e) => e.stopPropagation());
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openCustomEditor(el.dataset.edit);
+    });
+  }
   updateCatalogCount(hits.length);
 }
 
 function updateCatalogCount(n) {
+  const total = catalogAll().length;
   const el = document.getElementById('cat-count');
-  if (el) el.textContent = `${n} of ${IKEA.length}`;
+  if (el) el.textContent = `${n} of ${total}`;
+  // The total moves as you add pieces, so the placeholder is rewritten here
+  // rather than fixed once at boot.
+  const search = document.getElementById('catalog-search');
+  if (search) search.placeholder = `Search ${total} pieces…`;
 }
 
 function catalogItem(id) {
-  return IKEA.find((i) => i.id === id) || null;
+  return catalogById(id);
 }
 
 function onCatalogDown(e) {
@@ -189,7 +236,6 @@ function endPending() {
 
 function initCatalog() {
   const search = document.getElementById('catalog-search');
-  search.placeholder = `Search ${IKEA.length} IKEA pieces…`;
   search.addEventListener('input', () => {
     catalogFilter = search.value;
     renderCatalog();

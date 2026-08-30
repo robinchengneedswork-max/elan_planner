@@ -34,7 +34,7 @@
     <div class="toggles">
       <button id="btn-grid" class="on" title="1 ft grid">Grid</button>
       <button id="btn-clear" class="on" title="Live gaps around the selected piece">Clearances</button>
-      <button id="btn-color" title="Fill each piece with its real IKEA colour instead of its category">Colour</button>
+      <button id="btn-color" title="Fill each piece with its real colour instead of its category">Colour</button>
       <button id="btn-fit" title="Fit the plan to the window (F)">Fit</button>
     </div>
   </header>
@@ -50,12 +50,16 @@
 
       <div id="pane-catalog" class="pane on">
         <div class="search-wrap">
-          <input id="catalog-search" type="text" placeholder="Search 65 IKEA pieces&hellip;" autocomplete="off">
+          <input id="catalog-search" type="text" placeholder="Search the catalogue&hellip;" autocomplete="off">
           <div class="filter-row">
             <select id="catalog-sort" title="Order the catalogue"></select>
             <select id="catalog-cap" title="Hide anything above this price"></select>
             <span id="cat-count" class="count"></span>
           </div>
+          <button id="btn-add-custom" class="add-custom"
+                  title="Add a piece from anywhere — Amazon, Wayfair, a hand-me-down">
+            + Add your own piece
+          </button>
         </div>
         <div id="catalog-list"></div>
       </div>
@@ -121,6 +125,89 @@
   </div>
 </section>
 
+<!-- Add-your-own-furniture editor. Static markup rather than a template
+     literal: twelve fields read better as HTML. -->
+<dialog id="custom-modal" class="sheet">
+  <h2 id="custom-title">Add your own piece</h2>
+  <p class="sheet-note">
+    The 65 IKEA entries were measured off ikea.com. Anything else &mdash; an
+    Amazon alternative, a Wayfair sofa, the dresser you already own &mdash; you
+    type in here, and from then on it drags onto the plan, counts toward the
+    total and lands in the shopping list exactly like the rest.
+  </p>
+
+  <div class="rows sheet-rows">
+    <label for="cf-url">Product link</label>
+    <input id="cf-url" type="text" placeholder="https://www.amazon.com/&hellip;" autocomplete="off">
+
+    <label for="cf-name">Name</label>
+    <input id="cf-name" type="text" placeholder="Zinus Shalini" autocomplete="off">
+
+    <label for="cf-type">Kind</label>
+    <input id="cf-type" type="text" placeholder="Platform bed" autocomplete="off">
+
+    <label for="cf-category">Category</label>
+    <select id="cf-category"></select>
+
+    <label for="cf-w">Width</label>
+    <input id="cf-w" type="text" placeholder='63" or 5&#39;3"' autocomplete="off">
+
+    <label for="cf-d">Depth</label>
+    <input id="cf-d" type="text" placeholder='83" or 6&#39;11"' autocomplete="off">
+  </div>
+  <div class="sheet-hint">
+    Width and depth are the footprint looking down &mdash; for a bed that is its
+    width by its length. Amazon prints them on the listing as
+    &ldquo;Product Dimensions&rdquo;, usually as L&times;W&times;H in inches.
+  </div>
+
+  <h2 class="group" style="margin-left:0">Worth adding if you have it</h2>
+  <div class="rows sheet-rows">
+    <label for="cf-h">Height</label>
+    <input id="cf-h" type="text" placeholder="tallest point" autocomplete="off">
+
+    <label for="cf-price">Price</label>
+    <input id="cf-price" type="text" placeholder="299.99" autocomplete="off">
+
+    <label for="cf-colorName">Colour</label>
+    <span class="pair">
+      <input id="cf-colorName" type="text" placeholder="charcoal grey" autocomplete="off">
+      <input id="cf-colorHex" type="color" value="#c9c4bb" title="What the Colour toggle fills it with">
+    </span>
+
+    <label for="cf-rating">Rating</label>
+    <span class="pair">
+      <input id="cf-rating" type="text" placeholder="4.5" autocomplete="off">
+      <input id="cf-reviews" type="text" placeholder="reviews" autocomplete="off">
+    </span>
+
+    <label for="cf-img">Photo</label>
+    <span class="pair">
+      <input id="cf-img" type="text" placeholder="paste an image address" autocomplete="off">
+      <!-- The native file control prints "No file chosen" beside itself and
+           cannot be told not to, so it is hidden behind its own label. -->
+      <label class="filebtn" for="cf-file">Choose&hellip;</label>
+      <input id="cf-file" type="file" accept="image/*">
+    </span>
+
+    <label for="cf-round">Round</label>
+    <span class="pair check">
+      <input id="cf-round" type="checkbox">
+      <span>Draw the footprint as a circle, not a rectangle</span>
+    </span>
+  </div>
+  <img id="cf-preview" class="cf-preview empty" alt="">
+
+  <div id="custom-errors" class="form-errors" hidden></div>
+
+  <div class="sheet-foot">
+    <button id="cf-delete" class="danger" hidden>Delete</button>
+    <span class="spacer"></span>
+    <button id="cf-cancel" class="ghost">Cancel</button>
+    <button id="cf-save" class="primary">Add to catalogue</button>
+  </div>
+</dialog>
+
 <!-- Load order is dependency order: modules share global scope. -->
 <script src="src/config.js"></script>
 <script src="src/geometry.js"></script>
@@ -137,12 +224,14 @@
 <script src="src/data/plans/a8.js"></script>
 <script src="src/state.js"></script>
 <script src="src/layouts.js"></script>
+<script src="src/custom.js"></script>
 <script src="src/budget.js"></script>
 <script src="src/render.js"></script>
 <script src="src/catalog.js"></script>
 <script src="src/calibrate.js"></script>
 <script src="src/input.js"></script>
 <script src="src/ui.js"></script>
+<script src="src/custom-ui.js"></script>
 <script src="src/main.js"></script>
 </body>
 </html>

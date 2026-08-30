@@ -142,6 +142,8 @@ function onWheel(e) {
 function onKeyDown(e) {
   const tag = (e.target.tagName || '').toLowerCase();
   if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+  // A modal is open — Delete belongs to the form, not to the selected piece.
+  if (document.querySelector('dialog[open]')) return;
 
   if (e.code === 'Space') { spaceDown = true; e.preventDefault(); return; }
 

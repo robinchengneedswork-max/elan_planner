@@ -319,7 +319,7 @@ function drawRooms() {
 // colour on file, and those go grey rather than guessing at one.
 function itemFill(it) {
   if (!State.showRealColor) return CATEGORY_COLORS[it.category] || '#cccccc';
-  const cat = IKEA.find((c) => c.id === it.catId);
+  const cat = catalogById(it.catId);
   return cat && cat.color ? cat.color.hex : '#c9c4bb';
 }
 

@@ -8,7 +8,7 @@
 // A placed item carries its own w/d (they are editable), but never a price:
 // price belongs to the product, not to the copy of it on the floor.
 function catalogFor(item) {
-  return IKEA.find((c) => c.id === item.catId) || null;
+  return catalogById(item.catId);
 }
 
 function unitPrice(item) {
