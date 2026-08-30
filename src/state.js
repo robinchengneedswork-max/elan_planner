@@ -9,8 +9,10 @@ const State = {
   view: { z: 2, ox: 0, oy: 0 },
   drag: null,                // { uid, mode:'move'|'rotate', ... } while pointer is down
   layoutName: null,
+  budget: null,              // spending target in dollars, or null for none
   showGrid: true,
-  showClearance: true
+  showClearance: true,
+  showRealColor: false       // fill pieces with their IKEA colour, not the category tint
 };
 
 let uidSeq = 1;

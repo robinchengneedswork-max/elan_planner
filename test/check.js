@@ -140,9 +140,41 @@ if (API.IKEA) {
       `${it.w} x ${it.d}`);
     check(`catalog ${it.id} has a category colour`, !!CATEGORY_COLORS_LOOKUP(it.category), it.category);
     check(`catalog ${it.id} has a product url`, /^https:\/\/www\.ikea\.com\//.test(it.url || ''), it.url);
+    check(`catalog ${it.id} has a price`, typeof it.price === 'number' && it.price > 0, String(it.price));
+
+    // The photo is vendored, not hotlinked — so a missing file is a broken
+    // image in the sidebar, and only this check would catch it.
+    check(`catalog ${it.id} names a photo`, /^img\/[a-z0-9-]+\.jpg$/.test(it.img || ''), it.img);
+    check(`catalog ${it.id} photo exists on disk`,
+      !!it.img && fs.existsSync(path.join(ROOT, it.img)), it.img);
+
+    // Optional fields, but wrong is worse than absent.
+    if (it.h != null) {
+      check(`catalog ${it.id} has a sane height`, it.h > 4 && it.h < 100, String(it.h));
+    }
+    if (it.color) {
+      check(`catalog ${it.id} colour is a hex triple`, /^#[0-9a-f]{6}$/.test(it.color.hex), it.color.hex);
+      check(`catalog ${it.id} colour is named`, !!it.color.name, JSON.stringify(it.color));
+    }
+    if (it.rating != null) {
+      check(`catalog ${it.id} rating is 0..5`, it.rating >= 0 && it.rating <= 5, String(it.rating));
+      check(`catalog ${it.id} rating has a review count`,
+        typeof it.reviews === 'number' && it.reviews >= 0, String(it.reviews));
+    }
   }
   const unverified = API.IKEA.filter((i) => !i.verified);
   console.log(`  ${API.IKEA.length - unverified.length} verified against ikea.com, ${unverified.length} flagged`);
+  console.log(`  ${API.IKEA.filter((i) => i.img).length} photos, ` +
+    `${API.IKEA.filter((i) => i.color).length} colours, ` +
+    `${API.IKEA.filter((i) => i.rating != null).length} ratings, ` +
+    `${API.IKEA.filter((i) => i.h != null).length} heights`);
+
+  // Nothing outside img/ should be sitting in there unreferenced.
+  const referenced = new Set(API.IKEA.map((i) => i.img && path.basename(i.img)).filter(Boolean));
+  const onDisk = fs.existsSync(path.join(ROOT, 'img'))
+    ? fs.readdirSync(path.join(ROOT, 'img')).filter((f) => f.endsWith('.jpg')) : [];
+  const orphans = onDisk.filter((f) => !referenced.has(f));
+  check('img/ has no orphaned photos', orphans.length === 0, orphans.join(', '));
 }
 function CATEGORY_COLORS_LOOKUP(c) {
   return vm.runInContext(`CATEGORY_COLORS[${JSON.stringify(c)}]`, ctx);

@@ -310,6 +310,19 @@ function drawRooms() {
   }
 }
 
+// Two ways to colour a piece, answering two different questions.
+//
+// By category tells you what kind of thing it is, which is what you want while
+// you are still deciding where things go. By real colour tells you what the
+// room will look like — that four of the five pieces you picked are white, or
+// that the browns have quietly taken over. Nine catalogue entries have no
+// colour on file, and those go grey rather than guessing at one.
+function itemFill(it) {
+  if (!State.showRealColor) return CATEGORY_COLORS[it.category] || '#cccccc';
+  const cat = IKEA.find((c) => c.id === it.catId);
+  return cat && cat.color ? cat.color.hex : '#c9c4bb';
+}
+
 function drawItem(it, clash) {
   const corners = boxCorners(it);
   const z = State.view.z;
@@ -323,7 +336,7 @@ function drawItem(it, clash) {
   } else {
     pathPoly(corners);
   }
-  ctx.fillStyle = CATEGORY_COLORS[it.category] || '#cccccc';
+  ctx.fillStyle = itemFill(it);
   ctx.globalAlpha = rug ? 0.5 : 0.95;
   ctx.fill();
   ctx.globalAlpha = 1;

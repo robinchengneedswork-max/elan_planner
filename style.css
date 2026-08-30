@@ -33,23 +33,6 @@ html, body {
 .screen { display: none; height: 100%; }
 .screen.active { display: flex; }
 
-#screen-small {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-}
-#screen-small .card {
-  max-width: 420px;
-  background: var(--panel);
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  padding: 32px;
-  box-shadow: var(--shadow);
-}
-#screen-small h1 { font-size: 19px; margin: 0 0 10px; letter-spacing: -.01em; }
-#screen-small p { margin: 0; color: var(--ink-2); font-size: 14px; line-height: 1.6; }
-
 #screen-app { flex-direction: column; }
 
 /* --- top bar ------------------------------------------------------------- */
@@ -159,6 +142,24 @@ button.on { background: var(--accent-soft); border-color: #bcd6f5; color: #14508
   z-index: 2;
 }
 .search-wrap input { width: 100%; }
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.filter-row select {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 11.5px;
+  padding: 4px 6px;
+}
+.filter-row .count {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
 
 h2.group {
   font-size: 10px;
@@ -193,7 +194,33 @@ h2.group:first-child { margin-top: 14px; }
   border-radius: 2px;
   background: #ccc;
 }
-.cat-text { min-width: 0; flex: 1; }
+
+/* The product photo says what it looks like; the chip beside the dimensions
+   says what shape its footprint is. Different jobs, so both stay. */
+.cat-photo {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--rule-soft);
+  border-radius: 4px;
+  user-select: none;
+}
+.cat-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.chip {
+  border: 1px solid rgba(35, 32, 28, .4);
+  border-radius: 2px;
+  background: #ccc;
+}
+
+.cat-text { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 1px; }
 .cat-name { font-size: 13px; font-weight: 600; letter-spacing: -.005em; }
 .cat-sub {
   font-size: 11px;
@@ -202,6 +229,9 @@ h2.group:first-child { margin-top: 14px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.cat-meta { display: flex; align-items: center; gap: 5px; min-height: 12px; }
+.stars { font-size: 10px; color: #c9922f; letter-spacing: .5px; line-height: 1; }
+.cat-meta .rc { font-family: var(--mono); font-size: 9.5px; color: var(--ink-3); }
 .cat-dims { font-family: var(--mono); font-size: 11px; color: var(--ink-2); white-space: nowrap; }
 
 /* --- plan cards ---------------------------------------------------------- */
@@ -241,8 +271,44 @@ h2.group:first-child { margin-top: 14px; }
   text-align: center;
 }
 
+.insp-photo {
+  display: block;
+  width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
 .insp-title { font-size: 15px; font-weight: 700; letter-spacing: -.01em; }
 .insp-sub { font-size: 11.5px; color: var(--ink-3); margin-top: 2px; }
+
+.insp-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.insp-facts .fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--ink-2);
+  background: var(--panel-2);
+  border: 1px solid var(--rule-soft);
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+.insp-facts .fact b { font-weight: 600; color: var(--ink-3); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.insp-facts .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(35, 32, 28, .35);
+}
+.insp-facts .rc { font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
 
 .rows { display: grid; grid-template-columns: auto 1fr; gap: 7px 10px; align-items: center; margin-top: 14px; }
 .rows label { font-size: 11px; color: var(--ink-2); }
@@ -271,7 +337,62 @@ a.link:hover { text-decoration: underline; }
 .placed .dm { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
 .placed .x { color: var(--ink-3); padding: 0 3px; border: none; background: none; }
 .placed .x:hover { color: var(--warn); background: none; }
+.placed .pr { font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
 .placed.clash .nm { color: var(--warn); }
+
+/* --- budget -------------------------------------------------------------- */
+
+.money-rows {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 10px;
+  align-items: baseline;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.money-rows b { font-family: var(--mono); font-weight: 600; color: var(--ink); }
+.money-rows .tot {
+  border-top: 1px solid var(--rule);
+  padding-top: 6px;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.money-rows b.tot.over { color: var(--warn); }
+
+/* Fills left to right against the target; turns red the moment it passes it,
+   because the useful signal is not "how full" but "over or not". */
+.bar {
+  height: 6px;
+  margin-top: 9px;
+  border-radius: 999px;
+  background: var(--panel-2);
+  border: 1px solid var(--rule-soft);
+  overflow: hidden;
+}
+.bar i { display: block; height: 100%; background: var(--accent); }
+.bar.over i { background: var(--warn); }
+
+.spend-row, .cmp-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  padding: 3px 0;
+}
+.spend-row .nm, .cmp-row .nm { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.spend-row .pr, .cmp-row .pr { font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+.cmp-row.on .nm { font-weight: 600; }
+.cmp-row.on .pr { color: var(--ink); }
+.cmp-bar {
+  flex: 0 0 54px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+.cmp-bar i { display: block; height: 100%; background: var(--ink-3); }
+.cmp-row.on .cmp-bar i { background: var(--accent); }
 
 /* --- calibration --------------------------------------------------------- */
 
@@ -357,3 +478,65 @@ a.link:hover { text-decoration: underline; }
 ::-webkit-scrollbar-thumb { background: #ddd7c9; border: 3px solid var(--panel); border-radius: 9px; }
 ::-webkit-scrollbar-thumb:hover { background: #cfc7b6; }
 ::-webkit-scrollbar-track { background: transparent; }
+
+/* --- touch and narrow ----------------------------------------------------- */
+/*
+   The app used to refuse to render below 1100 px. It renders everywhere now,
+   but honestly: input.js listens for mouse events, so a finger cannot drag a
+   piece. Narrow screens get the whole app stacked -- plan on top, panels under
+   it -- and a coarse pointer additionally gets a line saying what it cannot do.
+*/
+
+.touch-note { display: none; }
+
+body.touch-only .touch-note {
+  display: block;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(35, 32, 28, .9);
+  color: #fff;
+  font-size: 11.5px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 9px;
+}
+body.touch-only .keys { display: none; }
+
+@media (max-width: 900px) {
+  .topbar {
+    height: auto;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .topbar .spacer { display: none; }
+  .brand { flex: 1 0 100%; margin-right: 0; }
+  .field { flex-wrap: wrap; }
+
+  .work { flex-direction: column; overflow-y: auto; }
+
+  /* Plan first: it is the thing you came to look at. */
+  .stage { order: 0; flex: 0 0 auto; height: 52vh; min-height: 260px; }
+  .side { order: 1; }
+  .side.right { order: 2; }
+
+  .side, .side.right {
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 62vh;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--rule);
+  }
+  .keys { display: none; }
+}
+
+@media (max-width: 560px) {
+  .stage { height: 46vh; }
+  .cat-photo { width: 36px; height: 36px; }
+  .insp-photo { max-height: 150px; }
+  .topbar .field > label { display: none; }
+}

@@ -1,0 +1,965 @@
+[
+ {
+  "id": "kivik-loveseat",
+  "name": "KIVIK",
+  "image": "https://www.ikea.com/us/en/images/products/kivik-loveseat-tibbleby-beige-gray__1056141_pe848273_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.4,
+  "reviews": 411,
+  "livePrice": 749,
+  "itemNo": "89440595",
+  "file": "img/kivik-loveseat.jpg"
+ },
+ {
+  "id": "kivik-sofa",
+  "name": "KIVIK",
+  "image": "https://www.ikea.com/us/en/images/products/kivik-sofa-tibbleby-beige-gray__1056143_pe848278_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.1,
+  "reviews": 539,
+  "livePrice": 799,
+  "itemNo": "39440593",
+  "file": "img/kivik-sofa.jpg"
+ },
+ {
+  "id": "finnala-sofa",
+  "name": "FINNALA",
+  "image": "https://www.ikea.com/us/en/images/products/finnala-sofa-gunnared-beige__0787232_pe763195_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 3.6,
+  "reviews": 44,
+  "livePrice": 1019,
+  "itemNo": "19319060",
+  "file": "img/finnala-sofa.jpg"
+ },
+ {
+  "id": "soderhamn",
+  "name": "SÖDERHAMN",
+  "image": "https://www.ikea.com/us/en/images/products/soederhamn-sofa-viarp-beige-brown__0802691_pe768544_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 3.6,
+  "reviews": 169,
+  "livePrice": 969,
+  "itemNo": "59305706",
+  "file": "img/soderhamn.jpg"
+ },
+ {
+  "id": "uppland-sofa",
+  "name": "UPPLAND",
+  "image": "https://www.ikea.com/us/en/images/products/uppland-sofa-blekinge-white__0818564_pe774486_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 3.7,
+  "reviews": 197,
+  "livePrice": 899,
+  "itemNo": "19384116",
+  "file": "img/uppland-sofa.jpg"
+ },
+ {
+  "id": "morabo-sofa",
+  "name": "MORABO",
+  "image": "https://www.ikea.com/us/en/images/products/morabo-sofa-gunnared-dark-gray-wood__0815940_pe773127_s5.jpg",
+  "exact": false,
+  "color": null,
+  "rating": 4.1,
+  "reviews": 166,
+  "livePrice": 799,
+  "itemNo": "09318320",
+  "file": "img/morabo-sofa.jpg"
+ },
+ {
+  "id": "friheten",
+  "name": "FRIHETEN",
+  "image": "https://www.ikea.com/us/en/images/products/friheten-sleeper-sectional-3-seat-w-storage-skiftebo-dark-gray__1089881_pe861727_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "gray",
+   "hex": "#949494"
+  },
+  "rating": 3.8,
+  "reviews": 2765,
+  "livePrice": 999,
+  "itemNo": "69216757",
+  "file": "img/friheten.jpg"
+ },
+ {
+  "id": "jattebo",
+  "name": "JÄTTEBO",
+  "image": "https://www.ikea.com/us/en/images/products/jaettebo-sectional-3-seat-samsala-dark-yellow-green__1139917_pe880567_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "green",
+   "hex": "#3b7d22"
+  },
+  "rating": 4,
+  "reviews": 24,
+  "livePrice": 1800,
+  "itemNo": "89485131",
+  "file": "img/jattebo.jpg"
+ },
+ {
+  "id": "poang",
+  "name": "POÄNG",
+  "image": "https://www.ikea.com/us/en/images/products/poaeng-armchair-birch-veneer-grann-golden-brown__1507256_pe1009198_s5.jpg",
+  "exact": true,
+  "color": null,
+  "rating": 4.5,
+  "reviews": 1757,
+  "livePrice": 299,
+  "itemNo": "99625254",
+  "file": "img/poang.jpg"
+ },
+ {
+  "id": "strandmon",
+  "name": "STRANDMON",
+  "image": "https://www.ikea.com/us/en/images/products/strandmon-wing-chair-nordvalla-dark-gray__0325432_pe517964_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "gray",
+   "hex": "#949494"
+  },
+  "rating": 4.6,
+  "reviews": 2450,
+  "livePrice": 299,
+  "itemNo": "90359829",
+  "file": "img/strandmon.jpg"
+ },
+ {
+  "id": "lisabo-table",
+  "name": "LISABO",
+  "image": "https://www.ikea.com/us/en/images/products/lisabo-table-ash-veneer__0737105_pe740883_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.6,
+  "reviews": 1048,
+  "livePrice": 299.99,
+  "itemNo": "70294339",
+  "file": "img/lisabo-table.jpg"
+ },
+ {
+  "id": "nasinge-table",
+  "name": "NÄSINGE",
+  "image": "https://www.ikea.com/us/en/images/products/naesinge-extendable-table-dark-brown-stained-beech-veneer__1393641_pe966304_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.2,
+  "reviews": 64,
+  "livePrice": 279.99,
+  "itemNo": "70587498",
+  "file": "img/nasinge-table.jpg"
+ },
+ {
+  "id": "norden-gateleg",
+  "name": "NORDEN",
+  "image": "https://www.ikea.com/us/en/images/products/norden-gateleg-table-birch__1457135_pe992560_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.6,
+  "reviews": 2425,
+  "livePrice": 359.99,
+  "itemNo": "90423887",
+  "file": "img/norden-gateleg.jpg"
+ },
+ {
+  "id": "vihals-table",
+  "name": "VIHALS",
+  "image": "https://www.ikea.com/us/en/images/products/vihals-table-white-white__1388805_pe964975_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.7,
+  "reviews": 111,
+  "livePrice": 129.99,
+  "itemNo": "39578509",
+  "file": "img/vihals-table.jpg"
+ },
+ {
+  "id": "docksta",
+  "name": "DOCKSTA",
+  "image": "https://www.ikea.com/us/en/images/products/docksta-table-white-white__0803262_pe768820_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.2,
+  "reviews": 572,
+  "livePrice": 279.99,
+  "itemNo": "19324995",
+  "file": "img/docksta.jpg"
+ },
+ {
+  "id": "lack-coffee",
+  "name": "LACK",
+  "image": "https://www.ikea.com/us/en/images/products/lack-coffee-table-black-brown__57540_pe163122_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.5,
+  "reviews": 4119,
+  "livePrice": 29.99,
+  "itemNo": "40104294",
+  "file": "img/lack-coffee.jpg"
+ },
+ {
+  "id": "vittsjo-coffee",
+  "name": "VITTSJÖ",
+  "image": "https://www.ikea.com/us/en/images/products/vittsjoe-coffee-table-black-brown-glass__0135348_pe292039_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.7,
+  "reviews": 718,
+  "livePrice": 99.99,
+  "itemNo": "80213309",
+  "file": "img/vittsjo-coffee.jpg"
+ },
+ {
+  "id": "listerby",
+  "name": "LISTERBY",
+  "image": "https://www.ikea.com/us/en/images/products/listerby-coffee-table-dark-brown-beech-veneer__1170191_pe892708_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 3.9,
+  "reviews": 40,
+  "livePrice": 399.99,
+  "itemNo": "90562246",
+  "file": "img/listerby.jpg"
+ },
+ {
+  "id": "malm-bed",
+  "name": "MALM",
+  "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame-dark-brown-veneer__1364773_pe956029_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4,
+  "reviews": 1459,
+  "livePrice": 249,
+  "itemNo": "09574367",
+  "file": "img/malm-bed.jpg"
+ },
+ {
+  "id": "malm-storage-bed",
+  "name": "MALM",
+  "image": "https://www.ikea.com/us/en/images/products/malm-storage-bed-white__1154392_pe886041_s5.jpg",
+  "h": 39.375,
+  "hFrom": "Headboard height",
+  "hWas": 3.75,
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 1384,
+  "livePrice": 599,
+  "itemNo": "70404818",
+  "file": "img/malm-storage-bed.jpg"
+ },
+ {
+  "id": "hemnes-bed",
+  "name": "HEMNES",
+  "image": "https://www.ikea.com/us/en/images/products/hemnes-bed-frame-black-brown-lyngoer-dark-gray__1355238_pe953077_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 3.5,
+  "reviews": 130,
+  "livePrice": 599,
+  "itemNo": "49567505",
+  "file": "img/hemnes-bed.jpg"
+ },
+ {
+  "id": "brimnes-bed",
+  "name": "BRIMNES",
+  "image": "https://www.ikea.com/us/en/images/products/brimnes-bed-frame-with-storage-headboard-black-luroey__1102026_pe866850_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "black",
+   "hex": "#000000"
+  },
+  "rating": 4.2,
+  "reviews": 1203,
+  "livePrice": 449,
+  "itemNo": "79129608",
+  "file": "img/brimnes-bed.jpg"
+ },
+ {
+  "id": "songesand",
+  "name": "SONGESAND",
+  "image": "https://www.ikea.com/us/en/images/products/songesand-bed-frame-brown-luroey__1101505_pe866684_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4,
+  "reviews": 439,
+  "livePrice": 299,
+  "itemNo": "59241069",
+  "file": "img/songesand.jpg"
+ },
+ {
+  "id": "tarva",
+  "name": "TARVA",
+  "image": "https://www.ikea.com/us/en/images/products/tarva-bed-frame-pine-luroey__1102036_pe866857_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 3.9,
+  "reviews": 769,
+  "livePrice": 199,
+  "itemNo": "29007794",
+  "file": "img/tarva.jpg"
+ },
+ {
+  "id": "slattum",
+  "name": "SLATTUM",
+  "image": "https://www.ikea.com/us/en/images/products/slattum-upholstered-bed-frame-vissle-dark-gray__1259363_pe926663_s5.jpg",
+  "h": 33.5,
+  "hFrom": "Headboard height",
+  "hWas": 4,
+  "exact": true,
+  "color": {
+   "name": "gray",
+   "hex": "#949494"
+  },
+  "rating": 4.2,
+  "reviews": 552,
+  "livePrice": 149,
+  "itemNo": "70571256",
+  "file": "img/slattum.jpg"
+ },
+ {
+  "id": "neiden",
+  "name": "NEIDEN",
+  "image": "https://www.ikea.com/us/en/images/products/neiden-bed-frame-pine-luroey__1102024_pe866848_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 3.9,
+  "reviews": 805,
+  "livePrice": 109,
+  "itemNo": "79248606",
+  "file": "img/neiden.jpg"
+ },
+ {
+  "id": "idanas-bed",
+  "name": "IDANÄS",
+  "image": "https://www.ikea.com/us/en/images/products/idanaes-bed-frame-white__0932345_pe791461_s5.jpg",
+  "h": 44.125,
+  "hFrom": "Headboard height",
+  "hWas": 2.5,
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4,
+  "reviews": 168,
+  "livePrice": 279,
+  "itemNo": "30458912",
+  "file": "img/idanas-bed.jpg"
+ },
+ {
+  "id": "brimnes-daybed",
+  "name": "BRIMNES",
+  "image": "https://www.ikea.com/us/en/images/products/brimnes-daybed-frame-with-2-drawers-white__1101301_pe866570_s5.jpg",
+  "exact": false,
+  "color": null,
+  "rating": 4,
+  "reviews": 1489,
+  "livePrice": 249,
+  "itemNo": "00598344",
+  "file": "img/brimnes-daybed.jpg"
+ },
+ {
+  "id": "pax-39",
+  "name": "PAX / GRIMO",
+  "image": "https://www.ikea.com/us/en/images/products/pax-grimo-wardrobe-combination-white-white__1381915_pe961975_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.8,
+  "reviews": 20,
+  "livePrice": 435,
+  "itemNo": "69560819",
+  "file": "img/pax-39.jpg"
+ },
+ {
+  "id": "pax-59",
+  "name": "PAX",
+  "image": "https://www.ikea.com/us/en/images/products/pax-2-wardrobe-frames-white__1357993_pe953764_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.5,
+  "reviews": 1175,
+  "livePrice": 340,
+  "itemNo": "99556397",
+  "file": "img/pax-59.jpg"
+ },
+ {
+  "id": "pax-98",
+  "name": "PAX",
+  "image": "https://www.ikea.com/us/en/images/products/pax-3-wardrobe-frames-gray-beige__1357997_pe953768_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.7,
+  "reviews": 338,
+  "livePrice": 540,
+  "itemNo": "99562384",
+  "file": "img/pax-98.jpg"
+ },
+ {
+  "id": "pax-19",
+  "name": "PAX",
+  "image": "https://www.ikea.com/us/en/images/products/pax-wall-mounted-storage-frame-white__1346275_pe950896_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 3.9,
+  "reviews": 75,
+  "livePrice": 170,
+  "itemNo": "40588159",
+  "file": "img/pax-19.jpg"
+ },
+ {
+  "id": "billy-31",
+  "name": "BILLY",
+  "image": "https://www.ikea.com/us/en/images/products/billy-bookcase-brown-walnut-effect__1590308_pe1038947_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.6,
+  "reviews": 3117,
+  "livePrice": 69,
+  "itemNo": "50508652",
+  "file": "img/billy-31.jpg"
+ },
+ {
+  "id": "billy-16",
+  "name": "BILLY",
+  "image": "https://www.ikea.com/us/en/images/products/billy-bookcase-blue__1590294_pe1038933_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "blue",
+   "hex": "#0058a3"
+  },
+  "rating": 4.7,
+  "reviews": 2271,
+  "livePrice": 69,
+  "itemNo": "40594928",
+  "file": "img/billy-16.jpg"
+ },
+ {
+  "id": "billy-oxberg",
+  "name": "BILLY / OXBERG",
+  "image": "https://www.ikea.com/us/en/images/products/billy-oxberg-bookcase-with-doors-brown-walnut-effect__1590437_pe1039075_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.7,
+  "reviews": 230,
+  "livePrice": 169,
+  "itemNo": "19563132",
+  "file": "img/billy-oxberg.jpg"
+ },
+ {
+  "id": "kallax-2x2",
+  "name": "KALLAX",
+  "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.7,
+  "reviews": 10527,
+  "livePrice": 79.99,
+  "itemNo": "20631663",
+  "file": "img/kallax-2x2.jpg"
+ },
+ {
+  "id": "kallax-4x4",
+  "name": "KALLAX",
+  "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644546_pe702768_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 2497,
+  "livePrice": 179.99,
+  "itemNo": "30275861",
+  "file": "img/kallax-4x4.jpg"
+ },
+ {
+  "id": "kallax-tv",
+  "name": "KALLAX",
+  "image": "https://www.ikea.com/us/en/images/products/kallax-tv-storage-combination-black-brown__1277931_pe931114_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.5,
+  "reviews": 68,
+  "livePrice": 169.99,
+  "itemNo": "49569444",
+  "file": "img/kallax-tv.jpg"
+ },
+ {
+  "id": "besta-tv",
+  "name": "BESTÅ",
+  "image": "https://www.ikea.com/us/en/images/products/besta-tv-unit-black-brown__0316226_pe516834_s5.jpg",
+  "exact": true,
+  "color": null,
+  "rating": 4.3,
+  "reviews": 2311,
+  "livePrice": 90,
+  "itemNo": "40565775",
+  "file": "img/besta-tv.jpg"
+ },
+ {
+  "id": "besta-burs",
+  "name": "BESTÅ",
+  "image": "https://www.ikea.com/us/en/images/products/besta-tv-bench-with-doors-black-brown-lappviken-brown-walnut-effect__1449600_pe989962_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 3.8,
+  "reviews": 376,
+  "livePrice": 225,
+  "itemNo": "49612174",
+  "file": "img/besta-burs.jpg"
+ },
+ {
+  "id": "storklinta-6",
+  "name": "STORKLINTA",
+  "image": "https://www.ikea.com/us/en/images/products/storklinta-6-drawer-dresser-white-anchor-unlock-function__1590235_pe1038874_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4,
+  "reviews": 297,
+  "livePrice": 249.99,
+  "itemNo": "60561248",
+  "file": "img/storklinta-6.jpg"
+ },
+ {
+  "id": "storklinta-3",
+  "name": "STORKLINTA",
+  "image": "https://www.ikea.com/us/en/images/products/storklinta-3-drawer-dresser-white-anchor-unlock-function__1344036_pe949704_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 3.9,
+  "reviews": 206,
+  "livePrice": 129.99,
+  "itemNo": "00559291",
+  "file": "img/storklinta-3.jpg"
+ },
+ {
+  "id": "hemnes-8drawer",
+  "name": "HEMNES",
+  "image": "https://www.ikea.com/us/en/images/products/hemnes-8-drawer-dresser-white-stain__1151400_pe886164_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4,
+  "reviews": 77,
+  "livePrice": 449.99,
+  "itemNo": "10576191",
+  "file": "img/hemnes-8drawer.jpg"
+ },
+ {
+  "id": "nordli-6",
+  "name": "NORDLI",
+  "image": "https://www.ikea.com/us/en/images/products/nordli-6-drawer-dresser-white__0555316_pe660400_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 3.3,
+  "reviews": 34,
+  "livePrice": 349.99,
+  "itemNo": "90622071",
+  "file": "img/nordli-6.jpg"
+ },
+ {
+  "id": "nordli-2",
+  "name": "NORDLI",
+  "image": "https://www.ikea.com/us/en/images/products/nordli-2-drawer-chest-white__0858019_pe660384_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 1.9,
+  "reviews": 25,
+  "livePrice": 99.99,
+  "itemNo": "30589079",
+  "file": "img/nordli-2.jpg"
+ },
+ {
+  "id": "hauga-wardrobe",
+  "name": "HAUGA",
+  "image": "https://www.ikea.com/us/en/images/products/hauga-wardrobe-with-sliding-doors-white__0898797_pe782657_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.3,
+  "reviews": 847,
+  "livePrice": 299.99,
+  "itemNo": "60456916",
+  "file": "img/hauga-wardrobe.jpg"
+ },
+ {
+  "id": "brimnes-wardrobe",
+  "name": "BRIMNES",
+  "image": "https://www.ikea.com/us/en/images/products/brimnes-wardrobe-with-3-doors-white__1268958_pe928897_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.4,
+  "reviews": 3893,
+  "livePrice": 249.99,
+  "itemNo": "90574800",
+  "file": "img/brimnes-wardrobe.jpg"
+ },
+ {
+  "id": "kleppstad",
+  "name": "KLEPPSTAD",
+  "image": "https://www.ikea.com/us/en/images/products/kleppstad-wardrobe-with-3-doors-white__0753594_pe748782_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.3,
+  "reviews": 1830,
+  "livePrice": 199.99,
+  "itemNo": "20441757",
+  "file": "img/kleppstad.jpg"
+ },
+ {
+  "id": "nordkisa",
+  "name": "NORDKISA",
+  "image": "https://www.ikea.com/us/en/images/products/nordkisa-open-wardrobe-with-sliding-door-bamboo__0756084_pe748766_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.6,
+  "reviews": 362,
+  "livePrice": 399.99,
+  "itemNo": "00439468",
+  "file": "img/nordkisa.jpg"
+ },
+ {
+  "id": "ivar-shelf",
+  "name": "IVAR",
+  "image": "https://www.ikea.com/us/en/images/products/ivar-shelf-unit-pine__0578810_pe669773_s5.jpg",
+  "exact": true,
+  "color": null,
+  "rating": 2.9,
+  "reviews": 114,
+  "livePrice": 120,
+  "itemNo": "39407070",
+  "file": "img/ivar-shelf.jpg"
+ },
+ {
+  "id": "vihals-shelf",
+  "name": "VIHALS",
+  "image": "https://www.ikea.com/us/en/images/products/vihals-shelving-unit-with-10-shelves-white__1035575_pe838110_s5.jpg",
+  "exact": false,
+  "color": {
+   "name": "gray",
+   "hex": "#949494"
+  },
+  "rating": 4.4,
+  "reviews": 116,
+  "livePrice": 159,
+  "itemNo": "50542905",
+  "file": "img/vihals-shelf.jpg"
+ },
+ {
+  "id": "gullaberg-shoe",
+  "name": "GULLABERG",
+  "image": "https://www.ikea.com/us/en/images/products/gullaberg-shoe-cabinet-with-2-compartments-white__1384131_pe962849_s5.jpg",
+  "exact": false,
+  "color": null,
+  "rating": 4.3,
+  "reviews": 111,
+  "livePrice": 179.99,
+  "itemNo": "40587697",
+  "file": "img/gullaberg-shoe.jpg"
+ },
+ {
+  "id": "micke-desk",
+  "name": "MICKE",
+  "image": "https://www.ikea.com/us/en/images/products/micke-desk-white__0736018_pe740345_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.5,
+  "reviews": 6369,
+  "livePrice": 99.99,
+  "itemNo": "80213074",
+  "file": "img/micke-desk.jpg"
+ },
+ {
+  "id": "lagkapten",
+  "name": "LAGKAPTEN / ADILS",
+  "image": "https://www.ikea.com/us/en/images/products/lagkapten-adils-desk-white__0976080_pe812978_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.2,
+  "reviews": 235,
+  "livePrice": 79.99,
+  "itemNo": "59417153",
+  "file": "img/lagkapten.jpg"
+ },
+ {
+  "id": "idasen-desk",
+  "name": "IDÅSEN",
+  "image": "https://www.ikea.com/us/en/images/products/idasen-desk-brown-dark-gray__0736572_pe740626_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.6,
+  "reviews": 107,
+  "livePrice": 449,
+  "itemNo": "99281039",
+  "file": "img/idasen-desk.jpg"
+ },
+ {
+  "id": "trotten-desk",
+  "name": "TROTTEN",
+  "image": "https://www.ikea.com/us/en/images/products/trotten-desk-white__1517370_pe1012271_s5.jpg",
+  "exact": true,
+  "color": null,
+  "rating": 5,
+  "reviews": 1,
+  "livePrice": 179.99,
+  "itemNo": "79621921",
+  "file": "img/trotten-desk.jpg"
+ },
+ {
+  "id": "alex-drawer",
+  "name": "ALEX",
+  "image": "https://www.ikea.com/us/en/images/products/alex-drawer-unit-white__0977775_pe813763_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.5,
+  "reviews": 3643,
+  "livePrice": 79.99,
+  "itemNo": "00473546",
+  "file": "img/alex-drawer.jpg"
+ },
+ {
+  "id": "rug-5x7",
+  "name": "STOENSE",
+  "image": "https://www.ikea.com/us/en/images/products/stoense-rug-low-pile-pale-pink__1535674_pe1016613_s5.jpg",
+  "exact": false,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 5988,
+  "livePrice": 249.99,
+  "itemNo": "20635449",
+  "file": "img/rug-5x7.jpg"
+ },
+ {
+  "id": "rug-6x9",
+  "name": "VOLLERSLEV",
+  "image": "https://www.ikea.com/us/en/images/products/vollerslev-rug-high-pile-white__0933663_pe792171_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 448,
+  "livePrice": 299.99,
+  "itemNo": "60492542",
+  "file": "img/rug-6x9.jpg"
+ },
+ {
+  "id": "rug-7x10",
+  "name": "STOENSE",
+  "image": "https://www.ikea.com/us/en/images/products/stoense-rug-low-pile-off-white__1495129_pe1004956_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 5988,
+  "livePrice": 249.99,
+  "itemNo": "20635449",
+  "file": "img/rug-7x10.jpg"
+ },
+ {
+  "id": "tornviken-island",
+  "name": "TORNVIKEN",
+  "image": "https://www.ikea.com/us/en/images/products/tornviken-kitchen-island-off-white-oak__0736817_pe740760_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "brown",
+   "hex": "#814820"
+  },
+  "rating": 4.7,
+  "reviews": 851,
+  "livePrice": 449.99,
+  "itemNo": "40391657",
+  "file": "img/tornviken-island.jpg"
+ },
+ {
+  "id": "raskog-cart",
+  "name": "RÅSKOG",
+  "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart-white__1366882_pe957173_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.6,
+  "reviews": 1136,
+  "livePrice": 39.99,
+  "itemNo": "30586783",
+  "file": "img/raskog-cart.jpg"
+ },
+ {
+  "id": "rosentorp-stool",
+  "name": "ROSENTORP",
+  "image": "https://www.ikea.com/us/en/images/products/rosentorp-bar-stool-with-backrest-counter-height-white__1434524_pe983576_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.5,
+  "reviews": 92,
+  "livePrice": 85,
+  "itemNo": "50618194",
+  "file": "img/rosentorp-stool.jpg"
+ },
+ {
+  "id": "rosentorp-chair",
+  "name": "ROSENTORP",
+  "image": "https://www.ikea.com/us/en/images/products/rosentorp-chair-white__1434529_pe983581_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "white",
+   "hex": "#ffffff"
+  },
+  "rating": 4.4,
+  "reviews": 175,
+  "livePrice": 75,
+  "itemNo": "80569998",
+  "file": "img/rosentorp-chair.jpg"
+ },
+ {
+  "id": "odger-chair",
+  "name": "ODGER",
+  "image": "https://www.ikea.com/us/en/images/products/odger-chair-white-beige__0727334_pe735606_s5.jpg",
+  "exact": true,
+  "color": {
+   "name": "beige",
+   "hex": "#f4f3d7"
+  },
+  "rating": 4.4,
+  "reviews": 920,
+  "livePrice": 125,
+  "itemNo": "60359996",
+  "file": "img/odger-chair.jpg"
+ }
+]

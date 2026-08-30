@@ -1,2 +1,3 @@
 # Dev-only — not part of the deployed site.
 test/
+tools/

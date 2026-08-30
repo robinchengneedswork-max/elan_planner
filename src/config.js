@@ -8,7 +8,13 @@ const STORAGE_KEY = 'elan-planner:v1';
 const PX_PER_IN_MIN = 0.6;
 const PX_PER_IN_MAX = 9;
 const FIT_PADDING_PX = 56;
-const MIN_DESKTOP_PX = 1100;
+// Below this the three columns stack instead of sitting side by side.
+const NARROW_PX = 900;
+
+// --- money ------------------------------------------------------------------
+// Duluth is in Gwinnett County: 4% Georgia + 2% county = 6%. Quoted so a total
+// is what you would actually hand over, not a subtotal that flatters itself.
+const SALES_TAX_RATE = 0.06;
 
 // --- editing ----------------------------------------------------------------
 const GRID_IN = 12;          // major grid = 1 ft

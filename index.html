@@ -7,15 +7,6 @@
 </head>
 <body>
 
-<!-- Shown instead of the app on anything too narrow to plan on. -->
-<section id="screen-small" class="screen">
-  <div class="card">
-    <h1>Elan Planner is a desktop tool</h1>
-    <p>Arranging furniture needs a wide canvas and a mouse. Open this on a laptop or
-       desktop at 1100&nbsp;px or wider.</p>
-  </div>
-</section>
-
 <section id="screen-app" class="screen">
 
   <header class="topbar">
@@ -43,6 +34,7 @@
     <div class="toggles">
       <button id="btn-grid" class="on" title="1 ft grid">Grid</button>
       <button id="btn-clear" class="on" title="Live gaps around the selected piece">Clearances</button>
+      <button id="btn-color" title="Fill each piece with its real IKEA colour instead of its category">Colour</button>
       <button id="btn-fit" title="Fit the plan to the window (F)">Fit</button>
     </div>
   </header>
@@ -59,6 +51,11 @@
       <div id="pane-catalog" class="pane on">
         <div class="search-wrap">
           <input id="catalog-search" type="text" placeholder="Search 65 IKEA pieces&hellip;" autocomplete="off">
+          <div class="filter-row">
+            <select id="catalog-sort" title="Order the catalogue"></select>
+            <select id="catalog-cap" title="Hide anything above this price"></select>
+            <span id="cat-count" class="count"></span>
+          </div>
         </div>
         <div id="catalog-list"></div>
       </div>
@@ -104,12 +101,18 @@
         wheel zoom &middot; space-drag or middle-drag pans
       </div>
       <div id="toast" class="toast"></div>
+      <!-- Only rendered on a coarse pointer. Saying so beats a canvas that
+           silently ignores every tap. -->
+      <div class="touch-note">
+        Read-only on touch &mdash; browse the catalogue, prices and saved
+        layouts here, but dragging furniture still needs a mouse.
+      </div>
     </main>
 
     <aside class="side right">
       <nav class="tabs">
         <button data-pane="pane-insp" class="on">Selected</button>
-        <button data-pane="pane-placed">In this layout</button>
+        <button data-pane="pane-placed">Pieces &amp; cost</button>
       </nav>
       <div id="pane-insp" class="pane on"></div>
       <div id="pane-placed" class="pane"></div>
@@ -134,6 +137,7 @@
 <script src="src/data/plans/a8.js"></script>
 <script src="src/state.js"></script>
 <script src="src/layouts.js"></script>
+<script src="src/budget.js"></script>
 <script src="src/render.js"></script>
 <script src="src/catalog.js"></script>
 <script src="src/calibrate.js"></script>
