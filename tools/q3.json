@@ -1,0 +1,10 @@
+[
+ {"id":"finnala-chaise","q":"FINNALA sofa with chaise","type":"chaise"},
+ {"id":"soderhamn-chaise","q":"SODERHAMN sofa with chaise","type":"chaise"},
+ {"id":"rug-big","q":"rug flatwoven 8 x 11","type":"Rug"},
+ {"id":"rug-runner","q":"rug low pile 8x10","type":"Rug"},
+ {"id":"nordkisa","q":"NORDKISA open wardrobe","type":"wardrobe"},
+ {"id":"vihals-shelf","q":"VIHALS shelving unit","type":"Shelv"},
+ {"id":"nesttun","q":"BRIMNES daybed","type":"Daybed|bed"},
+ {"id":"tv-stand-big","q":"TV unit with drawers","type":"TV"}
+]

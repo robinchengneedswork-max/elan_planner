@@ -34,7 +34,7 @@ function renderCatalog() {
     for (const it of items) {
       shown++;
       const price = it.price == null ? '' : ` &middot; $${it.price}`;
-      html += `<button class="cat-item" data-id="${it.id}" title="${it.name} ${it.type}">
+      html += `<button class="cat-item" data-id="${it.id}" title="${attr(it.name + ' ' + it.type)}">
         <span class="swatch" style="${swatchStyle(it)}"></span>
         <span class="cat-text">
           <span class="cat-name">${it.name}${it.verified ? '' : ' <span title="dimension not verified">&#9888;</span>'}</span>
@@ -46,7 +46,7 @@ function renderCatalog() {
   }
 
   if (!shown) {
-    html = `<div class="empty">Nothing matches &ldquo;${catalogFilter}&rdquo;.</div>`;
+    html = `<div class="empty">Nothing matches &ldquo;${attr(catalogFilter)}&rdquo;.</div>`;
   }
   host.innerHTML = html;
 

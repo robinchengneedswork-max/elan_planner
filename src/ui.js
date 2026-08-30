@@ -80,7 +80,7 @@ function renderLayoutSelect() {
   const sel = document.getElementById('layout-select');
   const names = layoutNames();
   sel.innerHTML = `<option value="">Working draft</option>` +
-    names.map((n) => `<option value="${n}">${n}</option>`).join('');
+    names.map((n) => `<option value="${attr(n)}">${attr(n)}</option>`).join('');
   sel.value = State.layoutName && names.includes(State.layoutName) ? State.layoutName : '';
 }
 
@@ -162,8 +162,8 @@ function updateInspector() {
     ${clash ? `<div class="calib-note" style="margin-top:12px;border-color:#e8bcbd;background:#fdf3f3;color:#a02a2c">
         This overlaps a wall, a fixture or another piece.</div>` : ''}
     <div class="rows">
-      <label for="in-w">Width</label><input id="in-w" type="text" value="${fmtIn(it.w)}">
-      <label for="in-d">Depth</label><input id="in-d" type="text" value="${fmtIn(it.d)}">
+      <label for="in-w">Width</label><input id="in-w" type="text" value="${attr(fmtIn(it.w))}">
+      <label for="in-d">Depth</label><input id="in-d" type="text" value="${attr(fmtIn(it.d))}">
       <label for="in-rot">Rotation</label><input id="in-rot" type="text" value="${Math.round(it.rot)}&deg;">
     </div>
     <div class="btn-row">
@@ -179,7 +179,7 @@ function updateInspector() {
     <h2 class="group" style="margin-left:0">Room around it</h2>
     <div class="rows">
       ${gaps.map((g, i) => `<label>${names[i]}</label>
-        <input readonly value="${isFinite(g.dist) ? fmtIn(g.dist) : '—'}">`).join('')}
+        <input readonly value="${attr(isFinite(g.dist) ? fmtIn(g.dist) : '—')}">`).join('')}
     </div>
     <div class="insp-sub" style="margin-top:10px;line-height:1.55">
       Gaps are measured from the middle of each face to the first thing in the way.
@@ -226,15 +226,9 @@ function updatePlacedList() {
       <button class="x" data-del="${it.uid}" title="Remove">&times;</button>
     </div>`).join('');
 
-  const cost = State.items.reduce((a, it) => {
-    const c = IKEA.find((k) => k.id === it.catId);
-    return a + (c && c.price != null ? c.price : 0);
-  }, 0);
-
   host.innerHTML = rows +
     `<div class="pane-pad insp-sub">${State.items.length} pieces &middot; ` +
-    `${totalPlacedArea().toFixed(0)} sq ft of floor covered &middot; ` +
-    `$${cost.toLocaleString()} at list</div>`;
+    `${totalPlacedArea().toFixed(0)} sq ft of the ${State.geo.areaSqft.toFixed(0)} sq ft floor covered</div>`;
 
   for (const el of host.querySelectorAll('.placed')) {
     el.addEventListener('click', (e) => {

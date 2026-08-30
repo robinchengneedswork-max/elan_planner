@@ -150,7 +150,14 @@ button.on { background: var(--accent-soft); border-color: #bcd6f5; color: #14508
 
 .pane-pad { padding: 14px; }
 
-.search-wrap { padding: 12px 14px; border-bottom: 1px solid var(--rule-soft); }
+.search-wrap {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule-soft);
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  z-index: 2;
+}
 .search-wrap input { width: 100%; }
 
 h2.group {

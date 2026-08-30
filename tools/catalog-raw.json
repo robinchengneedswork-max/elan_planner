@@ -1,0 +1,849 @@
+[
+ {
+  "id": "kivik-2",
+  "name": "KIVIK",
+  "typeName": "Loveseat",
+  "price": 749,
+  "url": "https://www.ikea.com/us/en/p/kivik-loveseat-tibbleby-beige-gray-s89440595/",
+  "measure": "",
+  "m": {
+   "width": 74.75,
+   "depth": 37.38,
+   "height": 32.63,
+   "seat width": 55.13,
+   "seat depth": 23.63,
+   "seat height": 17.75
+  }
+ },
+ {
+  "id": "kivik-3",
+  "name": "KIVIK",
+  "typeName": "Sofa",
+  "price": 799,
+  "url": "https://www.ikea.com/us/en/p/kivik-sofa-tibbleby-beige-gray-s39440593/",
+  "measure": "",
+  "m": {
+   "width": 89.75,
+   "depth": 37.38,
+   "height": 32.63,
+   "seat width": 70.88,
+   "seat depth": 23.63,
+   "seat height": 17.75
+  }
+ },
+ {
+  "id": "kivik-chaise",
+  "name": "KIVIK",
+  "typeName": "Sofa with chaise",
+  "price": 1349,
+  "url": "https://www.ikea.com/us/en/p/kivik-sofa-with-chaise-tresund-light-beige-s29482847/",
+  "measure": "",
+  "m": {
+   "height": 32.63,
+   "seat height": 17.75
+  }
+ },
+ {
+  "id": "vimle-3",
+  "name": "FINNALA",
+  "typeName": "Sofa",
+  "price": 1019,
+  "url": "https://www.ikea.com/us/en/p/finnala-sofa-gunnared-beige-s19319060/",
+  "measure": "",
+  "m": {
+   "width": 94.88,
+   "depth": 38.63,
+   "seat width": 83.13,
+   "seat depth": 21.63,
+   "seat height": 18.88
+  }
+ },
+ {
+  "id": "soderhamn",
+  "name": "SÖDERHAMN",
+  "typeName": "Sofa",
+  "price": 969,
+  "url": "https://www.ikea.com/us/en/p/soederhamn-sofa-viarp-beige-brown-s59305706/",
+  "measure": "",
+  "m": {
+   "width": 78,
+   "depth": 39,
+   "seat width": 73.25,
+   "seat depth": 18.88,
+   "seat height": 15.75
+  }
+ },
+ {
+  "id": "ektorp",
+  "name": "UPPLAND",
+  "typeName": "Sofa",
+  "price": 899,
+  "url": "https://www.ikea.com/us/en/p/uppland-sofa-blekinge-white-s19384116/",
+  "measure": "",
+  "m": {
+   "width": 88.25,
+   "depth": 36.25,
+   "seat width": 68.13,
+   "seat depth": 22.88,
+   "seat height": 18.5
+  }
+ },
+ {
+  "id": "landskrona",
+  "name": "MORABO",
+  "typeName": "Sofa",
+  "price": 799,
+  "url": "https://www.ikea.com/us/en/p/morabo-sofa-gunnared-dark-gray-wood-s89318321/",
+  "measure": "",
+  "m": {
+   "width": 81.13,
+   "depth": 36.25,
+   "height": 31.88,
+   "seat width": 70.88,
+   "seat depth": 24,
+   "seat height": 18.5
+  }
+ },
+ {
+  "id": "friheten",
+  "name": "FRIHETEN",
+  "typeName": "Sleeper sectional,3 seat w/storage",
+  "price": 999,
+  "url": "https://www.ikea.com/us/en/p/friheten-sleeper-sectional-3-seat-w-storage-skiftebo-dark-gray-s69216757/",
+  "measure": "",
+  "m": {
+   "depth": 59.5,
+   "bed width": 55.13,
+   "bed length": 80.38,
+   "width": 90.5
+  }
+ },
+ {
+  "id": "jattebo",
+  "name": "JÄTTEBO",
+  "typeName": "Mod corner sofa, 6 seat",
+  "price": 3965,
+  "url": "https://www.ikea.com/us/en/p/jaettebo-mod-corner-sofa-6-seat-samsala-dark-yellow-green-s29485252/",
+  "measure": "",
+  "m": {
+   "height": 28,
+   "seat height": 18.13,
+   "seat depth": 27.13,
+   "depth": 37.38
+  }
+ },
+ {
+  "id": "poang",
+  "name": "POÄNG",
+  "typeName": "Armchair",
+  "price": 299,
+  "url": "https://www.ikea.com/us/en/p/poaeng-armchair-birch-veneer-grann-golden-brown-s99625254/",
+  "measure": "",
+  "m": {
+   "width": 26.75,
+   "depth": 32.25,
+   "height": 39.38,
+   "seat width": 22,
+   "seat depth": 19.63,
+   "seat height": 16.5
+  }
+ },
+ {
+  "id": "strandmon",
+  "name": "STRANDMON",
+  "typeName": "Wing chair",
+  "price": 299,
+  "url": "https://www.ikea.com/us/en/p/strandmon-wing-chair-nordvalla-dark-gray-90359829/",
+  "measure": "",
+  "m": {
+   "width": 32.25,
+   "depth": 37.75,
+   "height": 39.75,
+   "seat width": 19.25,
+   "seat depth": 21.25,
+   "seat height": 17.75,
+   "length": 42.5
+  }
+ },
+ {
+  "id": "lisabo-table",
+  "name": "LISABO",
+  "typeName": "Table",
+  "price": 299.99,
+  "url": "https://www.ikea.com/us/en/p/lisabo-table-ash-veneer-70294339/",
+  "measure": "55 1/8x30 3/4 \"",
+  "m": {
+   "length": 55.13,
+   "width": 30.75,
+   "height": 29.13
+  }
+ },
+ {
+  "id": "ekedalen",
+  "name": "NÄSINGE",
+  "typeName": "Extendable table",
+  "price": 279.99,
+  "url": "https://www.ikea.com/us/en/p/naesinge-extendable-table-dark-brown-stained-beech-veneer-70587498/",
+  "measure": "51 1/8/74 3/4x31 1/2 \"",
+  "m": {
+   "height": 29.5,
+   "length": 51.13,
+   "width": 31.5
+  }
+ },
+ {
+  "id": "norden-gateleg",
+  "name": "NORDEN",
+  "typeName": "Gateleg table",
+  "price": 359.99,
+  "url": "https://www.ikea.com/us/en/p/norden-gateleg-table-birch-90423887/",
+  "measure": "10 1/4/35/59 7/8x31 1/2 \"",
+  "m": {
+   "length": 35,
+   "width": 31.5,
+   "height": 29.13
+  }
+ },
+ {
+  "id": "melltorp",
+  "name": "VIHALS",
+  "typeName": "Table",
+  "price": 129.99,
+  "url": "https://www.ikea.com/us/en/p/vihals-table-white-white-s39578509/",
+  "measure": "49 1/4x29 1/8 \"",
+  "m": {
+   "length": 49.25,
+   "width": 29.13,
+   "height": 29.5
+  }
+ },
+ {
+  "id": "docksta",
+  "name": "DOCKSTA",
+  "typeName": "Table",
+  "price": 279.99,
+  "url": "https://www.ikea.com/us/en/p/docksta-table-white-white-s19324995/",
+  "measure": "40 1/2 \"",
+  "m": {
+   "height": 29.5,
+   "diameter": 40.5
+  }
+ },
+ {
+  "id": "lack-coffee",
+  "name": "LACK",
+  "typeName": "Coffee table",
+  "price": 29.99,
+  "url": "https://www.ikea.com/us/en/p/lack-coffee-table-black-brown-40104294/",
+  "measure": "35 3/8x21 5/8 \"",
+  "m": {
+   "length": 35.38,
+   "width": 21.63,
+   "height": 17.75
+  }
+ },
+ {
+  "id": "vittsjo-coffee",
+  "name": "VITTSJÖ",
+  "typeName": "Coffee table",
+  "price": 99.99,
+  "url": "https://www.ikea.com/us/en/p/vittsjoe-coffee-table-black-brown-glass-80213309/",
+  "measure": "29 1/2 \"",
+  "m": {
+   "height": 17.75,
+   "diameter": 29.5,
+   "max. load": 22,
+   "width": 30.25,
+   "length": 30.75
+  }
+ },
+ {
+  "id": "listerby",
+  "name": "LISTERBY",
+  "typeName": "Coffee table",
+  "price": 399.99,
+  "url": "https://www.ikea.com/us/en/p/listerby-coffee-table-dark-brown-beech-veneer-90562246/",
+  "measure": "55 1/8x23 5/8 \"",
+  "m": {
+   "length": 55.13,
+   "width": 23.63,
+   "height": 14.63,
+   "max. load": 44
+  }
+ },
+ {
+  "id": "malm-bed",
+  "name": "MALM",
+  "typeName": "Bed frame",
+  "price": 249,
+  "url": "https://www.ikea.com/us/en/p/malm-bed-frame-dark-brown-veneer-s09574367/",
+  "measure": "Queen",
+  "m": {
+   "length": 83.13,
+   "width": 66.13,
+   "height": 39.38
+  }
+ },
+ {
+  "id": "malm-storage-bed",
+  "name": "MALM",
+  "typeName": "Storage bed",
+  "price": 599,
+  "url": "https://www.ikea.com/us/en/p/malm-storage-bed-white-70404818/",
+  "measure": "Queen",
+  "m": {
+   "length": 83.5,
+   "width": 66.13,
+   "height": 3.75
+  }
+ },
+ {
+  "id": "hemnes-bed",
+  "name": "HEMNES",
+  "typeName": "Bed frame",
+  "price": 599,
+  "url": "https://www.ikea.com/us/en/p/hemnes-bed-frame-black-brown-lyngoer-dark-gray-s49567505/",
+  "measure": "Queen",
+  "m": {
+   "length": 83.88,
+   "width": 65.75
+  }
+ },
+ {
+  "id": "brimnes-bed",
+  "name": "BRIMNES",
+  "typeName": "Bed frame with storage & headboard",
+  "price": 449,
+  "url": "https://www.ikea.com/us/en/p/brimnes-bed-frame-with-storage-headboard-black-luroey-s79129608/",
+  "measure": "Queen",
+  "m": {
+   "length": 95.25,
+   "width": 62.25,
+   "height": 43.75
+  }
+ },
+ {
+  "id": "songesand",
+  "name": "SONGESAND",
+  "typeName": "Bed frame",
+  "price": 299,
+  "url": "https://www.ikea.com/us/en/p/songesand-bed-frame-brown-luroey-s59241069/",
+  "measure": "Queen",
+  "m": {
+   "length": 81.88,
+   "width": 65
+  }
+ },
+ {
+  "id": "tarva",
+  "name": "TARVA",
+  "typeName": "Bed frame",
+  "price": 199,
+  "url": "https://www.ikea.com/us/en/p/tarva-bed-frame-pine-luroey-s29007794/",
+  "measure": "Queen",
+  "m": {
+   "length": 82.25,
+   "width": 63
+  }
+ },
+ {
+  "id": "slattum",
+  "name": "SLATTUM",
+  "typeName": "Upholstered bed frame",
+  "price": 149,
+  "url": "https://www.ikea.com/us/en/p/slattum-upholstered-bed-frame-vissle-dark-gray-70571256/",
+  "measure": "Queen",
+  "m": {
+   "length": 81.88,
+   "width": 61.38,
+   "height": 4
+  }
+ },
+ {
+  "id": "neiden",
+  "name": "NEIDEN",
+  "typeName": "Bed frame",
+  "price": 109,
+  "url": "https://www.ikea.com/us/en/p/neiden-bed-frame-pine-luroey-s79248606/",
+  "measure": "Full",
+  "m": {
+   "length": 76.75,
+   "width": 54.75
+  }
+ },
+ {
+  "id": "idanas-bed",
+  "name": "IDANÄS",
+  "typeName": "Bed frame",
+  "price": 279,
+  "url": "https://www.ikea.com/us/en/p/idanaes-bed-frame-white-30458912/",
+  "measure": "Queen",
+  "m": {
+   "length": 82.25,
+   "width": 64.13,
+   "height": 2.5
+  }
+ },
+ {
+  "id": "pax-39",
+  "name": "PAX / GRIMO",
+  "typeName": "Wardrobe combination",
+  "price": 435,
+  "url": "https://www.ikea.com/us/en/p/pax-grimo-wardrobe-combination-white-white-s69560819/",
+  "measure": "39 3/8x23 5/8x79 1/4 \"",
+  "m": {
+   "width": 39.38,
+   "depth": 23.63,
+   "height": 79.25
+  }
+ },
+ {
+  "id": "pax-59",
+  "name": "PAX",
+  "typeName": "2 wardrobe frames",
+  "price": 340,
+  "url": "https://www.ikea.com/us/en/p/pax-2-wardrobe-frames-white-s99556397/",
+  "measure": "58 7/8x22 7/8x79 1/4 \"",
+  "m": {
+   "width": 58.88,
+   "depth": 22.88,
+   "height": 79.25
+  }
+ },
+ {
+  "id": "pax-79",
+  "name": "PAX",
+  "typeName": "2 wardrobe frames",
+  "price": 340,
+  "url": "https://www.ikea.com/us/en/p/pax-2-wardrobe-frames-white-s99556397/",
+  "measure": "58 7/8x22 7/8x79 1/4 \"",
+  "m": {
+   "width": 58.88,
+   "depth": 22.88,
+   "height": 79.25
+  }
+ },
+ {
+  "id": "billy-31",
+  "name": "BILLY",
+  "typeName": "Bookcase",
+  "price": 69,
+  "url": "https://www.ikea.com/us/en/p/billy-bookcase-brown-walnut-effect-50508652/",
+  "measure": "31 1/2x11x79 1/2 \"",
+  "m": {
+   "width": 31.5,
+   "depth": 11,
+   "height": 79.5,
+   "length": 81.25
+  }
+ },
+ {
+  "id": "billy-16",
+  "name": "BILLY",
+  "typeName": "Bookcase",
+  "price": 69,
+  "url": "https://www.ikea.com/us/en/p/billy-bookcase-blue-40594928/",
+  "measure": "15 3/4x11x79 1/2 \"",
+  "m": {
+   "width": 15.75,
+   "depth": 11,
+   "height": 79.5,
+   "length": 81.5
+  }
+ },
+ {
+  "id": "kallax-2x2",
+  "name": "KALLAX",
+  "typeName": "Shelf unit",
+  "price": 79.99,
+  "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-20631663/",
+  "measure": "30 1/8x57 5/8 \"",
+  "m": {
+   "width": 30.13,
+   "depth": 15.38,
+   "height": 57.63,
+   "length": 59
+  }
+ },
+ {
+  "id": "kallax-2x4",
+  "name": "KALLAX",
+  "typeName": "Shelf unit",
+  "price": 179.99,
+  "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-30275861/",
+  "measure": "57 7/8x57 5/8 \"",
+  "m": {
+   "width": 57.88,
+   "depth": 15.38,
+   "height": 57.63,
+   "length": 59.5
+  }
+ },
+ {
+  "id": "kallax-4x4",
+  "name": "KALLAX",
+  "typeName": "Shelf unit",
+  "price": 179.99,
+  "url": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-30275861/",
+  "measure": "57 7/8x57 5/8 \"",
+  "m": {
+   "width": 57.88,
+   "depth": 15.38,
+   "height": 57.63,
+   "length": 59.5
+  }
+ },
+ {
+  "id": "besta-tv",
+  "name": "BESTÅ",
+  "typeName": "TV unit",
+  "price": 90,
+  "url": "https://www.ikea.com/us/en/p/besta-tv-unit-black-brown-40565775/",
+  "measure": "70 7/8x15 3/4x15 \"",
+  "m": {
+   "width": 70.88,
+   "depth": 15.75,
+   "height": 15,
+   "length": 72.75
+  }
+ },
+ {
+  "id": "besta-burs",
+  "name": "BESTÅ",
+  "typeName": "TV bench with doors",
+  "price": 225,
+  "url": "https://www.ikea.com/us/en/p/besta-tv-bench-with-doors-black-brown-lappviken-brown-walnut-effect-s49612174/",
+  "measure": "70 7/8x16 1/2x15 \"",
+  "m": {
+   "width": 70.88,
+   "depth": 16.5,
+   "height": 15
+  }
+ },
+ {
+  "id": "malm-6drawer",
+  "name": "STORKLINTA",
+  "typeName": "6-drawer dresser",
+  "price": 229.99,
+  "url": "https://www.ikea.com/us/en/p/storklinta-6-drawer-dresser-white-anchor-unlock-function-10559281/",
+  "measure": "27 1/2x18 7/8x47 1/4 \"",
+  "m": {
+   "depth": 18.88,
+   "height": 47.25,
+   "width": 27.5,
+   "length": 48
+  }
+ },
+ {
+  "id": "malm-3drawer",
+  "name": "STORKLINTA",
+  "typeName": "3-drawer dresser",
+  "price": 129.99,
+  "url": "https://www.ikea.com/us/en/p/storklinta-3-drawer-dresser-white-anchor-unlock-function-00559291/",
+  "measure": "27 1/2x18 7/8x29 1/2 \"",
+  "m": {
+   "depth": 18.88,
+   "height": 29.5,
+   "width": 27.5,
+   "length": 33.25
+  }
+ },
+ {
+  "id": "hemnes-8drawer",
+  "name": "HEMNES",
+  "typeName": "8-drawer dresser",
+  "price": 449.99,
+  "url": "https://www.ikea.com/us/en/p/hemnes-8-drawer-dresser-white-stain-10576191/",
+  "measure": "63x37 3/4 \"",
+  "m": {
+   "width": 63,
+   "depth": 19.63,
+   "height": 37.75,
+   "length": 66
+  }
+ },
+ {
+  "id": "nordli-chest",
+  "name": "NORDLI",
+  "typeName": "2-drawer chest",
+  "price": 99.99,
+  "url": "https://www.ikea.com/us/en/p/nordli-2-drawer-chest-white-30589079/",
+  "measure": "15 3/4x21 1/4 \"",
+  "m": {
+   "depth": 18.5,
+   "height": 21.25,
+   "width": 15.75,
+   "length": 36.5
+  }
+ },
+ {
+  "id": "hauga-wardrobe",
+  "name": "HAUGA",
+  "typeName": "Wardrobe with sliding doors",
+  "price": 299.99,
+  "url": "https://www.ikea.com/us/en/p/hauga-wardrobe-with-sliding-doors-white-60456916/",
+  "measure": "46 1/2x21 5/8x78 3/8 \"",
+  "m": {
+   "width": 46.5,
+   "depth": 21.63,
+   "height": 78.38,
+   "length": 79.5
+  }
+ },
+ {
+  "id": "brimnes-wardrobe",
+  "name": "BRIMNES",
+  "typeName": "Wardrobe with 3 doors",
+  "price": 249.99,
+  "url": "https://www.ikea.com/us/en/p/brimnes-wardrobe-with-3-doors-white-90574800/",
+  "measure": "46x19 3/4x74 3/4 \"",
+  "m": {
+   "width": 46,
+   "depth": 19.75,
+   "height": 74.75,
+   "length": 76.5
+  }
+ },
+ {
+  "id": "ivar-shelf",
+  "name": "IVAR",
+  "typeName": "Shelf unit",
+  "price": 120,
+  "url": "https://www.ikea.com/us/en/p/ivar-shelf-unit-pine-s39407070/",
+  "measure": "35x19 5/8x70 1/2 \"",
+  "m": {
+   "width": 35,
+   "depth": 19.63,
+   "height": 70.5
+  }
+ },
+ {
+  "id": "kleppstad",
+  "name": "KLEPPSTAD",
+  "typeName": "Wardrobe with 3 doors",
+  "price": 199.99,
+  "url": "https://www.ikea.com/us/en/p/kleppstad-wardrobe-with-3-doors-white-20441757/",
+  "measure": "46 1/8x21 5/8x69 1/4 \"",
+  "m": {
+   "width": 46.13,
+   "depth": 21.63,
+   "height": 69.25,
+   "length": 67.75
+  }
+ },
+ {
+  "id": "micke-desk",
+  "name": "MICKE",
+  "typeName": "Desk",
+  "price": 99.99,
+  "url": "https://www.ikea.com/us/en/p/micke-desk-white-80213074/",
+  "measure": "41 3/8x19 5/8 \"",
+  "m": {
+   "max. load": 110,
+   "width": 41.38,
+   "depth": 19.63,
+   "height": 29.5,
+   "length": 44
+  }
+ },
+ {
+  "id": "malm-desk",
+  "name": "MICKE",
+  "typeName": "Desk",
+  "price": 99.99,
+  "url": "https://www.ikea.com/us/en/p/micke-desk-white-80213074/",
+  "measure": "41 3/8x19 5/8 \"",
+  "m": {
+   "max. load": 110,
+   "width": 41.38,
+   "depth": 19.63,
+   "height": 29.5,
+   "length": 44
+  }
+ },
+ {
+  "id": "lagkapten",
+  "name": "LAGKAPTEN / ADILS",
+  "typeName": "Desk",
+  "price": 79.99,
+  "url": "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-s59417153/",
+  "measure": "55 1/8x23 5/8 \"",
+  "m": {
+   "max. load": 110,
+   "length": 55.13,
+   "width": 23.63,
+   "height": 28.75
+  }
+ },
+ {
+  "id": "idasen-desk",
+  "name": "IDÅSEN",
+  "typeName": "Desk",
+  "price": 449,
+  "url": "https://www.ikea.com/us/en/p/idasen-desk-brown-dark-gray-s99281039/",
+  "measure": "63x31 1/2 \"",
+  "m": {
+   "length": 63,
+   "width": 31.5,
+   "max. load": 154
+  }
+ },
+ {
+  "id": "alex-drawer",
+  "name": "ALEX",
+  "typeName": "Drawer unit",
+  "price": 79.99,
+  "url": "https://www.ikea.com/us/en/p/alex-drawer-unit-white-00473546/",
+  "measure": "14 1/8x27 1/2 \"",
+  "m": {
+   "width": 14.13,
+   "depth": 22.88,
+   "height": 27.5,
+   "max. load": 26,
+   "length": 32
+  }
+ },
+ {
+  "id": "rug-5x8",
+  "name": "ÄRENDE",
+  "typeName": "Rug, high pile",
+  "price": 69.99,
+  "url": "https://www.ikea.com/us/en/p/aerende-rug-high-pile-off-white-20576435/",
+  "measure": "5 ' 3 \"x7 ' 7 \"",
+  "m": {
+   "length": 7,
+   "width": 5,
+   "diameter": 7.5
+  }
+ },
+ {
+  "id": "rug-7x10",
+  "name": "VOLLERSLEV",
+  "typeName": "Rug, high pile",
+  "price": 299.99,
+  "url": "https://www.ikea.com/us/en/p/vollerslev-rug-high-pile-white-60492542/",
+  "measure": "6 ' 7 \"x9 ' 10 \"",
+  "m": {
+   "length": 9,
+   "width": 6,
+   "diameter": 10.5
+  }
+ },
+ {
+  "id": "rug-8x11",
+  "name": "LOHALS",
+  "typeName": "Rug, flatwoven",
+  "price": 129.99,
+  "url": "https://www.ikea.com/us/en/p/lohals-rug-flatwoven-natural-50277393/",
+  "measure": "5 ' 3 \"x7 ' 7 \"",
+  "m": {
+   "length": 7,
+   "width": 5,
+   "diameter": 7
+  }
+ },
+ {
+  "id": "rug-morum",
+  "name": "MORUM",
+  "typeName": "Rug flatwoven, in/outdoor",
+  "price": 99.99,
+  "url": "https://www.ikea.com/us/en/p/morum-rug-flatwoven-in-outdoor-orange-20623125/",
+  "measure": "5 ' 3 \"x7 ' 7 \"",
+  "m": {
+   "length": 7,
+   "width": 5,
+   "diameter": 5.25
+  }
+ },
+ {
+  "id": "stenstorp-island",
+  "name": "TORNVIKEN",
+  "typeName": "Kitchen island",
+  "price": 449.99,
+  "url": "https://www.ikea.com/us/en/p/tornviken-kitchen-island-off-white-oak-40391657/",
+  "measure": "49 5/8x30 3/8 \"",
+  "m": {
+   "length": 49.63,
+   "width": 30.38,
+   "height": 35.38
+  }
+ },
+ {
+  "id": "raskog-cart",
+  "name": "RÅSKOG",
+  "typeName": "Utility cart",
+  "price": 39.99,
+  "url": "https://www.ikea.com/us/en/p/raskog-utility-cart-white-30586783/",
+  "measure": "13 3/4x17 3/4x30 3/8 \"",
+  "m": {
+   "height": 30.38,
+   "length": 13.75,
+   "max. load": 40,
+   "width": 17.75
+  }
+ },
+ {
+  "id": "ingolf-stool",
+  "name": "ROSENTORP",
+  "typeName": "Bar stool with backrest",
+  "price": 85,
+  "url": "https://www.ikea.com/us/en/p/rosentorp-bar-stool-with-backrest-counter-height-white-50618194/",
+  "measure": "24 3/4 \"",
+  "m": {
+   "width": 15.75,
+   "depth": 17.75,
+   "height": 36.25,
+   "seat width": 15.75,
+   "seat depth": 14.13,
+   "seat height": 24.75,
+   "length": 37.75
+  }
+ },
+ {
+  "id": "ingolf-chair",
+  "name": "ROSENTORP",
+  "typeName": "Chair",
+  "price": 75,
+  "url": "https://www.ikea.com/us/en/p/rosentorp-chair-white-80569998/",
+  "measure": "",
+  "m": {
+   "width": 17.38,
+   "depth": 20.88,
+   "height": 35.88,
+   "seat width": 17.38,
+   "seat depth": 15.38,
+   "seat height": 17.75,
+   "length": 37.5
+  }
+ },
+ {
+  "id": "odger-chair",
+  "name": "ODGER",
+  "typeName": "Chair",
+  "price": 125,
+  "url": "https://www.ikea.com/us/en/p/odger-chair-white-beige-60359996/",
+  "measure": "",
+  "m": {
+   "width": 17.75,
+   "depth": 20.13,
+   "height": 31.88,
+   "seat width": 17.75,
+   "seat depth": 16.13,
+   "seat height": 16.88,
+   "length": 21.75
+  }
+ },
+ {
+  "id": "billy-oxberg",
+  "name": "BILLY / OXBERG",
+  "typeName": "Bookcase with doors",
+  "price": 169,
+  "url": "https://www.ikea.com/us/en/p/billy-oxberg-bookcase-with-doors-brown-walnut-effect-s19563132/",
+  "measure": "31 1/2x11 3/4x79 1/2 \"",
+  "m": {
+   "width": 31.5,
+   "depth": 11.75,
+   "height": 79.5
+  }
+ }
+]

@@ -5,6 +5,7 @@
 // 141 -> `11'9"`.  Rounds to the nearest inch; that is the resolution anyone
 // can actually measure with a tape.
 function fmtIn(inches) {
+  if (!isFinite(inches)) return "—";
   const neg = inches < 0;
   const n = Math.round(Math.abs(inches));
   const ft = Math.floor(n / 12);
@@ -22,6 +23,16 @@ function parseIn(text) {
   const m2 = s.match(/^(-?\d+(?:\.\d+)?)\s*(?:"|in)?$/i);
   if (m2) return parseFloat(m2[1]);
   return NaN;
+}
+
+// fmtIn produces an inch mark, which would close an HTML attribute early.
+// Anything written into value="..." or title="..." goes through this first.
+function attr(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 const DEG = Math.PI / 180;
@@ -161,7 +172,9 @@ function boxClearances(b, segs) {
     const py = b.y + mx * s + my * c;
     const dx = nx * c - ny * s;
     const dy = nx * s + ny * c;
-    const dist = rayCast(px + dx * 0.05, py + dy * 0.05, dx, dy, segs);
+    const EPS = 0.05;
+    const hit = rayCast(px - dx * EPS, py - dy * EPS, dx, dy, segs);
+    const dist = isFinite(hit) ? Math.max(0, hit - EPS) : hit;
     return { px, py, dx, dy, dist };
   });
 }

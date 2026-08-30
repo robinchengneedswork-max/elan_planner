@@ -15,7 +15,6 @@ const GRID_IN = 12;          // major grid = 1 ft
 const SNAP_GRID_IN = 1;      // free movement resolution
 const SNAP_WALL_IN = 5;      // pull-to-wall / pull-to-fixture tolerance
 const SNAP_ITEM_IN = 5;      // edge-align to another placed item
-const SNAP_ANGLE_DEG = 6;    // rotation snaps to a wall's angle within this
 const ROT_STEP_DEG = 15;
 const NUDGE_IN = 1;
 const NUDGE_BIG_IN = 6;
@@ -37,7 +36,6 @@ const TUB = { w: 60, d: 30 };
 const SHOWER = { w: 60, d: 36 };
 const TOILET = { w: 20, d: 28 };
 const VANITY_D = 21;
-const WD_UNIT = { w: 54, d: 32 };
 
 // --- palette ----------------------------------------------------------------
 // Paper-and-ink drafting look: warm paper, near-black walls, muted fixtures,

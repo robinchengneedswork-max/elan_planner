@@ -1,0 +1,22 @@
+[
+ {"id":"kivik-chaise","q":"KIVIK sofa with chaise","match":"kivik-sofa-with-chaise"},
+ {"id":"jattebo","q":"JATTEBO sofa","match":"jaettebo"},
+ {"id":"pax-98","q":"PAX 3 wardrobe frames","type":"Wardrobe"},
+ {"id":"pax-49","q":"PAX wardrobe frame","type":"Wardrobe","mref":"^19|^49"},
+ {"id":"malm-6drawer","q":"MALM 6-drawer dresser white","match":"malm-6-drawer"},
+ {"id":"malm-3drawer","q":"MALM 3-drawer chest white","match":"malm-3-drawer"},
+ {"id":"trotten-desk","q":"TROTTEN desk","type":"Desk"},
+ {"id":"rug-a","q":"STOENSE rug low pile","type":"Rug"},
+ {"id":"rug-b","q":"VINDUM rug high pile","type":"Rug"},
+ {"id":"rug-c","q":"LOHALS rug flatwoven","type":"Rug"},
+ {"id":"hemnes-shoe","q":"HEMNES shoe cabinet","type":"cabinet"},
+ {"id":"ekedalen-real","q":"EKEDALEN table","match":"ekedalen"},
+ {"id":"melltorp-real","q":"MELLTORP table","match":"melltorp"},
+ {"id":"ektorp-real","q":"EKTORP sofa","match":"ektorp"},
+ {"id":"landskrona-real","q":"LANDSKRONA sofa","match":"landskrona"},
+ {"id":"vimle-real","q":"VIMLE sofa 3 seat","match":"vimle"},
+ {"id":"ingolf-real","q":"INGOLF chair","match":"ingolf"},
+ {"id":"stenstorp-real","q":"STENSTORP kitchen island","match":"stenstorp"},
+ {"id":"nordli-6","q":"NORDLI 6-drawer dresser","match":"nordli-6"},
+ {"id":"bekant-desk","q":"BEKANT desk","type":"Desk"}
+]

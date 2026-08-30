@@ -17,7 +17,7 @@ function renderCalibration() {
     html += `<div class="calib-row">
       <label for="p-${key}">${name}</label>
       <input id="p-${key}" data-key="${key}" type="text"
-             class="${edited ? 'edited' : ''}" value="${fmtIn(value)}">
+             class="${edited ? 'edited' : ''}" value="${attr(fmtIn(value))}">
     </div>`;
   }
   host.innerHTML = html;

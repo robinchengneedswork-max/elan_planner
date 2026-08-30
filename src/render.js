@@ -300,7 +300,9 @@ function drawRooms() {
       color: COLORS.roomLabel
     });
     if (r.label) {
-      label(r.label, cx, cy + 9, {
+      // Measured off the polygon rather than reprinted from the leasing plan,
+      // so a corrected wall shows its corrected number.
+      label(`${fmtIn(b.w)} x ${fmtIn(b.h)}`, cx, cy + 9, {
         font: '11px ui-monospace, SFMono-Regular, Menlo, monospace',
         color: COLORS.dimLine
       });

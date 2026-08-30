@@ -6,7 +6,6 @@ const State = {
   overrides: {},             // { [planId]: { PARAM: inches } }
   items: [],                 // placed furniture
   selectedUid: null,
-  hoverUid: null,
   view: { z: 2, ox: 0, oy: 0 },
   drag: null,                // { uid, mode:'move'|'rotate', ... } while pointer is down
   layoutName: null,
