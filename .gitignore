@@ -1,0 +1,14 @@
+# Vercel
+.vercel/
+
+# Node (only test/check.js needs node; there are no dependencies)
+node_modules/
+npm-debug.log*
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Elan Planner — unit 242 furniture layout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Shown instead of the app on anything too narrow to plan on. -->
+<section id="screen-small" class="screen">
+  <div class="card">
+    <h1>Elan Planner is a desktop tool</h1>
+    <p>Arranging furniture needs a wide canvas and a mouse. Open this on a laptop or
+       desktop at 1100&nbsp;px or wider.</p>
+  </div>
+</section>
+
+<section id="screen-app" class="screen">
+
+  <header class="topbar">
+    <div class="brand">
+      <b>Elan Planner</b>
+      <span>Elan Satellite Place &middot; Duluth, GA &middot; unit 242</span>
+    </div>
+
+    <div class="field">
+      <label for="plan-select">Plan</label>
+      <select id="plan-select"></select>
+    </div>
+
+    <div class="field">
+      <label for="layout-select">Layout</label>
+      <select id="layout-select"></select>
+      <button id="btn-save" title="Save changes to this layout">Save</button>
+      <button id="btn-saveas">Save as&hellip;</button>
+      <button id="btn-rename" class="ghost">Rename</button>
+      <button id="btn-delete" class="ghost danger">Delete</button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="toggles">
+      <button id="btn-grid" class="on" title="1 ft grid">Grid</button>
+      <button id="btn-clear" class="on" title="Live gaps around the selected piece">Clearances</button>
+      <button id="btn-fit" title="Fit the plan to the window (F)">Fit</button>
+    </div>
+  </header>
+
+  <div class="work">
+
+    <aside class="side">
+      <nav class="tabs">
+        <button data-pane="pane-catalog" class="on">Furniture</button>
+        <button data-pane="pane-plans">Floor plan</button>
+        <button data-pane="pane-calib">Dimensions</button>
+      </nav>
+
+      <div id="pane-catalog" class="pane on">
+        <div class="search-wrap">
+          <input id="catalog-search" type="text" placeholder="Search 65 IKEA pieces&hellip;" autocomplete="off">
+        </div>
+        <div id="catalog-list"></div>
+      </div>
+
+      <div id="pane-plans" class="pane">
+        <div class="pane-pad">
+          <div class="calib-note">
+            Unit 242 is a one-bedroom, so it is one of these nine. Compare the
+            leasing renders to what you saw on the tour and pick the match &mdash;
+            each layout you save is tied to the plan it was drawn in.
+          </div>
+          <div id="plan-cards"></div>
+        </div>
+      </div>
+
+      <div id="pane-calib" class="pane">
+        <div class="pane-pad">
+          <div class="calib-note">
+            These plans are reconstructed from the leasing renders, which print
+            room sizes but not wall-by-wall dimensions. After you tour with a tape
+            measure, correct anything here and the plan redraws around it.
+          </div>
+          <div id="calib-rows"></div>
+          <div class="btn-row">
+            <button id="btn-reset-params">Reset to published</button>
+          </div>
+          <div id="calib-area" class="calib-note" style="margin-top:14px"></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <canvas id="plan"></canvas>
+      <div class="hud">
+        <span id="hud-plan"></span>
+        <span id="hud-cursor"></span>
+        <span id="hud-count"></span>
+      </div>
+      <div class="keys">
+        <kbd>R</kbd> rotate &middot; <kbd>&#8679;R</kbd> back &middot;
+        <kbd>&#8984;D</kbd> duplicate &middot; <kbd>Del</kbd> remove<br>
+        <kbd>&#8592;&#8593;&#8594;&#8595;</kbd> nudge 1&Prime; &middot;
+        wheel zoom &middot; space-drag or middle-drag pans
+      </div>
+      <div id="toast" class="toast"></div>
+    </main>
+
+    <aside class="side right">
+      <nav class="tabs">
+        <button data-pane="pane-insp" class="on">Selected</button>
+        <button data-pane="pane-placed">In this layout</button>
+      </nav>
+      <div id="pane-insp" class="pane on"></div>
+      <div id="pane-placed" class="pane"></div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- Load order is dependency order: modules share global scope. -->
+<script src="src/config.js"></script>
+<script src="src/geometry.js"></script>
+<script src="src/data/ikea.js"></script>
+<script src="src/data/plans/index.js"></script>
+<script src="src/data/plans/a1.js"></script>
+<script src="src/data/plans/a2.js"></script>
+<script src="src/data/plans/a2h.js"></script>
+<script src="src/data/plans/a3.js"></script>
+<script src="src/data/plans/a4.js"></script>
+<script src="src/data/plans/a5.js"></script>
+<script src="src/data/plans/a6.js"></script>
+<script src="src/data/plans/a7.js"></script>
+<script src="src/data/plans/a8.js"></script>
+<script src="src/state.js"></script>
+<script src="src/layouts.js"></script>
+<script src="src/render.js"></script>
+<script src="src/catalog.js"></script>
+<script src="src/calibrate.js"></script>
+<script src="src/input.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
